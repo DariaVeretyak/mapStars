@@ -1,0 +1,119 @@
+@import "../../styles/utils/vars";
+@import "../../styles/utils/typography.scss";
+@import "../../styles/utils/mixins.scss";
+
+.Examples {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px 60px 40px;
+
+  &__title {
+    @include h2;
+    @include adaptiv-value("font-size", 60, 32, 0);
+  }
+
+  &__content {
+    display: flex;
+    padding-top: 30px;
+    gap: 60px;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+  }
+
+  &__prev {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    @include adaptiv-value("width", 513, 288, 0);
+    gap: 9px;
+
+    @include iPad {
+      flex-direction: column;
+      width: 30%;
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include adaptiv-value("width", 143, 89, 0);
+      @include adaptiv-value("height", 143, 89, 0);
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: url(../../images//logoExample.svg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 66px;
+      height: 70px;
+    }
+
+    @include mobile {
+      align-self: center;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-value("width", 252, 126, 0);
+    @include adaptiv-value("height", 273, 136, 0);
+    border-radius: 30px;
+    @include adaptiv-value("padding", 26, 16, 0);
+
+    &:first-child {
+      background: $orangeGradient;
+    }
+
+    &:nth-child(2) {
+      background: url(../../images/car1.png) no-repeat center;
+      background-size: contain;
+
+      @include iPad {
+        display: none;
+      }
+    }
+
+    &:nth-child(3) {
+      background: url(../../images/car2.png) no-repeat center;
+      background-size: contain;
+
+      @include iPad {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      background-color: $dark;
+      justify-content: flex-end;
+    }
+  }
+
+  &__increase {
+    font-size: 22px;
+    line-height: 129%;
+    color: #fff;
+  }
+
+  &__indicators {
+    @include adaptiv-value("font-size", 55, 34, 0);
+    line-height: 129%;
+    color: #fff;
+  }
+}

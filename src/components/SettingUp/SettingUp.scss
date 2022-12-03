@@ -1,0 +1,115 @@
+@import "../../styles/utils/vars";
+@import "../../styles/utils/typography.scss";
+@import "../../styles/utils/mixins.scss";
+
+.SettingUp {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 60px 226px 0 95px;
+  background-color: $dark;
+  border-radius: 50px;
+  margin: 120px 60px 40px;
+  overflow: hidden;
+
+  @include tablet {
+    padding: 60px 140px 0 38px;
+  }
+
+  @include iPad {
+    padding: 60px 40px;
+  }
+
+  @include mobile {
+    margin: 40px 0 30px;
+    width: 100%;
+    padding: 40px 16px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    @media (max-width: 1023px) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include h2;
+    @include adaptiv-value("font-size", 50, 30, 0);
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    @include adaptiv-value("gap", 55, 25, 0);
+    border-bottom: 1px solid rgba(48, 60, 119, 1);
+  }
+
+  &__btn {
+    background-color: transparent;
+    padding: 20px 0 11px;
+    font-size: 20px;
+    line-height: 129%;
+    font-weight: 600;
+
+    &--adWords {
+      background: -webkit-linear-gradient(103.85deg, #FA8550 0%, #F33F5E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-bottom: 2px solid rgba(243, 63, 94, 1);
+    }
+
+    &--booking {
+      border-bottom: 2px solid transparent;
+    }
+
+    &:hover {
+      background: -webkit-linear-gradient(103.85deg, #FA8550 0%, #F33F5E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-bottom: 2px solid rgba(243, 63, 94, 1);
+    }
+  }
+
+  &__link {
+    color: #fff;
+  }
+
+  &__content {
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 114px;
+    @include adaptiv-value("font-size", 17, 15, 0);
+    line-height: 150%;
+
+    @include mobile {
+      line-height: 120%;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__images {
+    position: relative;
+    background: url(../../images/setting1.png) no-repeat;
+    background-size: contain;
+    @include adaptiv-value("width", 341, 213, 0);
+    top: 15vw;
+
+    &::after {
+      position: absolute;
+      top: 431px;
+      left: 172px;
+      content: url('../../images/setting2.png');
+    }
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+}

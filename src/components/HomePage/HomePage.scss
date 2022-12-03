@@ -1,0 +1,394 @@
+@import "../../styles/utils/vars";
+@import "../../styles/utils/typography.scss";
+@import "../../styles/utils/mixins.scss";
+
+.HomePage {
+  display: flex;
+  height: max-content;
+  width: 100%;
+
+  &__conteiner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    @include widthConteiner;
+    margin: 0 auto;
+    border-radius: 60px;
+    @include animation('backgroundAnim 3s infinite alternate');
+
+    @include iPad {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 479px;
+    margin: 170px 0 149px 95px;
+    z-index: 3;
+
+    @include tablet {
+      margin: 140px 0 110px 55px;
+    }
+
+    @include iPad {
+      width: 100%;
+      margin: 40px;
+    }
+
+    @include mobile {
+      margin: 40px 20px;
+    }
+  }
+
+  &__h1 {
+    @include h1;
+    color: #fff;
+  }
+
+  &__subtitle {
+    @include h4;
+    color: #fff;
+    padding-top: 16px;
+  }
+
+  &__animation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @include iPad {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__backgroundImg {
+    position: absolute;
+    bottom: -13px;
+    right: 16.5vw;
+    z-index: 3;
+    height: 80%;
+  }
+
+  &__decoration {
+    position: absolute;
+
+    &::before {
+      content: '';
+      display: block;
+      border: 0.93px solid rgba(255, 139, 163, 1);
+      border-radius: 50%;
+    }
+
+    &--1 {
+      right: 13.8vw;
+      bottom: 47px;
+
+      &::before {
+        @include adaptiv-value("width", 458, 229, 0);
+        @include adaptiv-value("height", 458, 229, 0);
+        @include animation('decor 2s infinite alternate');
+      }
+    }
+
+    &--2 {
+      right: 7.3vw;
+      bottom: -56px;
+
+      &::before {
+        @include adaptiv-value("width", 665, 332, 0);
+        @include adaptiv-value("height", 665, 332, 0);
+        @include animation('decor 2s infinite alternate');
+      }
+    }
+
+    &--3 {
+      bottom: -150px;
+      right: 2.2vw;
+
+      &::before {
+        @include adaptiv-value("width", 852, 426, 0);
+        @include adaptiv-value("height", 852, 426, 0);
+        @include animation('decor 2s infinite alternate');
+      }
+    }
+  }
+
+  &__ellipse {
+    position: absolute;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 6.48px;
+      height: 6.48px;
+      border-radius: 50%;
+    }
+
+    &--1 {
+      right: 50.3vw;
+      top: 22%;
+
+      &::before {
+        background-color: rgba(243, 131, 130, 1);
+      }
+    }
+
+    &--2 {
+      right: 48.3vw;
+      top: 52.8%;
+
+      &::before {
+        background: rgba(243, 127, 140, 1);
+      }
+    }
+
+    &--3 {
+      right: 52.7vw;
+      top: 80.9%;
+
+      &::before {
+        background: rgba(243, 131, 130, 1);
+      }
+    }
+
+    &--4 {
+      right: 36.1vw;
+      top: 27.4%;
+
+      &::before {
+        background: rgba(243, 122, 145, 1);
+      }
+    }
+
+    &--5 {
+      right: 18.6vw;
+      top: 10.1%;
+
+      &::before {
+        background: rgba(243, 120, 155, 1);
+      }
+    }
+
+    &--6 {
+      right: 6.7vw;
+      top: 16.3%;
+
+      &::before {
+        background: rgba(245, 120, 151, 1);
+      }
+    }
+
+    &--7 {
+      right: 7.4vw;
+      top: 64%;
+
+      &::before {
+        background: rgba(248, 121, 142, 1);
+      }
+    }
+  }
+
+  &__app {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0px 0px 7.41px 0px rgba(0, 0, 0, 0.12);
+      width: 85%;
+      height: 85%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+    }
+
+    &--1 {
+     @include adaptiv-value("width", 77.4, 48.3, 0);
+      @include adaptiv-value("height", 77.4, 48.3, 0);
+      top: 28.8px;
+      right: 37vw;
+      @include animation('scaleReduce 2s infinite alternate');
+
+      &::after {
+        content: url('../../images/appsIcons/image1.svg');
+      }
+    }
+
+    &--2 {
+      @include adaptiv-value("width", 110.4, 69, 0);
+      @include adaptiv-value("height", 110.4, 69, 0);
+      top: 134.4px;
+      right: 38.5vw;
+      @include animation('scaleAdd 2s infinite alternate');
+
+      &::after {
+        content: url('../../images/appsIcons/image2.svg');
+      }
+    }
+
+    &--3 {
+      @include adaptiv-value("width", 64.8, 40.5, 0);
+      @include adaptiv-value("height", 64.8, 40.5, 0);
+      top: 249.3px;
+      right: 47.2vw;
+      @include animation('scaleAdd 2s infinite alternate');
+
+      &::after {
+        content: url('../../images/appsIcons/image3.svg');
+      }
+    }
+
+    &--4 {
+      @include adaptiv-value("width", 105.6, 66, 0);
+      @include adaptiv-value("height", 105.6, 66, 0);
+      top: 293.7px;
+      right: 38.8vw;
+      @include animation('scaleReduce 2s infinite alternate');
+
+      &::after {
+        content: url('../../images/appsIcons/image4.svg');
+      }
+    }
+
+    &--5 {
+      @include adaptiv-value("width", 112, 70, 0);
+      @include adaptiv-value("height", 112, 70, 0);
+      top: 412.5px;
+      right: 44.4vw;
+      @include animation('scaleAdd 2s infinite alternate');
+
+      &::after {
+        content: url('../../images/appsIcons/image5.svg');
+      }
+    }
+
+    &--6 {
+      @include adaptiv-value("width", 95.4, 59.6, 0);
+      @include adaptiv-value("height", 95.4, 59.6, 0);
+      top: 79.8px;
+      right: 14.4vw;
+      @include animation('scaleAdd 2s infinite alternate');
+
+      &::after {
+        content: url('../../images/appsIcons/image6.svg');
+      }
+    }
+
+    &--7 {
+      @include adaptiv-value("width", 117.6, 73.5, 0);
+      @include adaptiv-value("height", 117.6, 73.5, 0);
+      top: 192.75px;
+      right: 7.8vw;
+      @include animation('scaleReduce 2s infinite alternate');
+
+      &::after {
+        content: url('../../images/appsIcons/image7.svg');
+      }
+    }
+
+    &--8 {
+      @include adaptiv-value("width", 64.8, 40.5, 0);
+      @include adaptiv-value("height", 64.8, 40.5, 0);
+      top: 222.3px;
+      right: 19.4vw;
+      @include animation('scaleAdd 2s infinite alternate');
+
+      &::after {
+        content: url('../../images/appsIcons/image8.svg');
+      }
+    }
+
+    &--9 {
+      @include adaptiv-value("width", 94.2, 58.8, 0);
+      @include adaptiv-value("height", 94.2, 58.8, 0);
+      top: 323.3px;
+      right: 13.3vw;
+      @include animation('scaleReduce 2s infinite alternate');
+      z-index: 4;
+
+      &::after {
+        content: url('../../images/appsIcons/image9.svg');
+      }
+    }
+
+    &--10 {
+      @include adaptiv-value("width", 119.5, 74.7, 0);
+      @include adaptiv-value("height", 119.5, 74.7, 0);
+      top: 455.7px;
+      right: 7.8vw;
+      @include animation('scaleAdd 2s infinite alternate');
+
+      &::after {
+        content: url('../../images/appsIcons/image10.svg');
+      }
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    left: 95px;
+    bottom: 0;
+    transform: translateY(50%);
+    @include adaptiv-value("width", 113, 95, 0);
+    @include adaptiv-value("height", 113, 95, 0);
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+
+    @include iPad {
+      left: 80%;
+    }
+
+    @include mobile {
+      left: 70%;
+    }
+
+    &::after {
+      content: url('../../images/icons/scrollDown.svg');
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 83px;
+      height: 83px;
+      @include animation('rotateAnim 5s infinite alternate');
+    }
+  }
+
+  &__btn {
+    gap: 12px;
+    @include button;
+    margin-top: 26px;
+    background: $dark;
+    padding: 22px 50px;
+
+    @include mobile {
+      padding: 12px 20px;
+    }
+
+    &:hover {
+      box-shadow: 1px 4px 16px rgba(17, 26, 69, 0.6);
+    }
+  }
+}
