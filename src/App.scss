@@ -1,3 +1,41 @@
-.starter {
-  font-size: 18px;
+@import "./styles/utils/mixins";
+@import "./styles/utils/vars";
+@import "./styles/utils/typography";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+
+  &--dialog {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 10;
+    }
+  }
+
+  &__section {
+    height: max-content;
+
+    @media (min-width: 1350px) {
+      margin: 120px auto 40px;
+      width: 1290px;
+    }
+
+    @media (max-width: 1349px) {
+      margin: 70px auto 30px;
+      @include widthConteiner;
+    }
+
+    @include mobile {
+      margin: 40px auto 30px;
+    }
+  }
 }
