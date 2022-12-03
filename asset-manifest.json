@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "./static/css/main.a2b5b79c.chunk.css",
+    "main.js": "./static/js/main.6681300c.chunk.js",
+    "main.js.map": "./static/js/main.6681300c.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.811a5bd4.js",
+    "runtime-main.js.map": "./static/js/runtime-main.811a5bd4.js.map",
+    "static/css/2.464016d2.chunk.css": "./static/css/2.464016d2.chunk.css",
+    "static/js/2.c5f98906.chunk.js": "./static/js/2.c5f98906.chunk.js",
+    "static/js/2.c5f98906.chunk.js.map": "./static/js/2.c5f98906.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/2.464016d2.chunk.css.map": "./static/css/2.464016d2.chunk.css.map",
+    "static/css/main.a2b5b79c.chunk.css.map": "./static/css/main.a2b5b79c.chunk.css.map",
+    "static/js/2.c5f98906.chunk.js.LICENSE.txt": "./static/js/2.c5f98906.chunk.js.LICENSE.txt",
+    "static/media/Awards.scss": "./static/media/8.263f6b9b.svg",
+    "static/media/Technology.scss": "./static/media/5.e3a994c0.png",
+    "static/media/App.scss": "./static/media/qaefqs-ttfirsneue-regular.209302a8.ttf",
+    "static/media/UsefulInfo.scss": "./static/media/MacBook.ef215540.png",
+    "static/media/Advantages.scss": "./static/media/price.7f3924b0.svg",
+    "static/media/Services.scss": "./static/media/whatsApp.9a85bbd7.svg",
+    "static/media/Examples.scss": "./static/media/logoExample.1874eeaf.svg",
+    "static/media/Packages.scss": "./static/media/check.b1136cba.svg",
+    "static/media/Footer.scss": "./static/media/twitter-logo.76e660b9.svg",
+    "static/media/Header.scss": "./static/media/logo.70296b9b.svg",
+    "static/media/homePage.00fd5450.png": "./static/media/homePage.00fd5450.png",
+    "static/media/HowWork.scss": "./static/media/howWork3_2.4062727e.png",
+    "static/media/HomePage.scss": "./static/media/scrollDown.9d6b9ab1.svg",
+    "static/media/SettingUp.scss": "./static/media/setting2.76375656.png",
+    "static/media/Contacts.scss": "./static/media/telegram.4609f8f5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.811a5bd4.js",
+    "static/css/2.464016d2.chunk.css",
+    "static/js/2.c5f98906.chunk.js",
+    "static/css/main.a2b5b79c.chunk.css",
+    "static/js/main.6681300c.chunk.js"
+  ]
+}
