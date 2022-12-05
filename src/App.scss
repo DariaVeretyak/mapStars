@@ -7,6 +7,7 @@
   flex-direction: column;
   width: 100%;
   background-color: #fff;
+  overflow: hidden;
 
   &--dialog {
     &::before {
@@ -17,6 +18,8 @@
       right: 0;
       height: 100%;
       background-color: rgba(0,0,0,0.5);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
       z-index: 10;
     }
   }

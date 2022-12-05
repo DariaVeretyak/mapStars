@@ -97,7 +97,7 @@ export const Header = ({
                 Advantages
               </Link>
             </li>
-            <li>
+            <li className="Header__nav-li">
               <Link
                 to="/howWorks"
                 className={

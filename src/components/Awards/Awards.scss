@@ -37,6 +37,7 @@
     border: 1px solid rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.26);
     padding: 10px;
+    transition: all 0.3s ease;
 
     &--1 {
       background: url(../../images/awards-icons/1.svg) no-repeat center;
@@ -76,6 +77,10 @@
     &--8 {
       background: url(../../images/awards-icons/8.svg) no-repeat center;
       background-size: contain;
+    }
+
+    &:hover {
+      box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.6);
     }
   }
 }

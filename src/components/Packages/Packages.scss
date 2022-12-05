@@ -156,5 +156,9 @@
       bottom: 30px;
       padding: 12px 20px;
     }
+
+    &:hover {
+      box-shadow: 1px 4px 16px rgba(255, 119, 87, 0.6);
+    }
   }
 }
