@@ -8,7 +8,7 @@ export const Footer = () => {
   const [menuOpen] = useState(false);
 
   return (
-    <div className="Footer">
+    <footer className="Footer">
       <a
         href="#header"
       >
@@ -88,6 +88,6 @@ export const Footer = () => {
           .
         </a>
       </div>
-    </div>
+    </footer>
   );
 };

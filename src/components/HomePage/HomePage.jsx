@@ -58,20 +58,18 @@ export const HomePage = ({ getStarted }) => {
             src={image}
             alt="background"
           />
-          <div className="HomePage__decor">
-            <div className="HomePage__decoration HomePage__decoration--1" />
-            <div className="HomePage__decoration HomePage__decoration--2" />
-            <div className="HomePage__decoration HomePage__decoration--3" />
-            {ellipses.map(ellipse => (
-              <div
-                key={ellipse}
-                className={`HomePage__ellipse HomePage__ellipse--${ellipse}`}
-              />
-            ))}
-            {apps.map(app => (
-              <div key={app} className={`HomePage__app HomePage__app--${app}`} />
-            ))}
-          </div>
+          <div className="HomePage__decoration HomePage__decoration--1" />
+          <div className="HomePage__decoration HomePage__decoration--2" />
+          <div className="HomePage__decoration HomePage__decoration--3" />
+          {ellipses.map(ellipse => (
+            <div
+              key={ellipse}
+              className={`HomePage__ellipse HomePage__ellipse--${ellipse}`}
+            />
+          ))}
+          {/* {apps.map(app => (
+            <div key={app} className={`HomePage__app HomePage__app--${app}`} />
+          ))} */}
         </div>
         <button
           type="button"

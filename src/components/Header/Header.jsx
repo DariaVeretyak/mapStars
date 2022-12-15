@@ -36,7 +36,7 @@ export const Header = ({
   // #endregion
 
   return (
-    <div className="Header">
+    <header className="Header">
       <div className="Header__conteiner">
         <div
           className={
@@ -198,7 +198,7 @@ export const Header = ({
           </button>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

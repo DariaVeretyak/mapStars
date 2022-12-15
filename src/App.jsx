@@ -16,6 +16,7 @@ import { SettingUp } from './components/SettingUp';
 import { Contacts } from './components/Contacts/Contacts';
 import { Footer } from './components/Footer/Footer';
 import './App.scss';
+import { SocialNetworksWith } from './components/SocialNetworkWith';
 
 const App = () => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -56,19 +57,20 @@ const App = () => {
 
         {openDialog && <GetStartedDialog closeDialog={closeDialog} />}
 
-        <div className="App__mainBlock">
+        <main className="App__mainBlock">
           <HomePage getStarted={getStarted} />
           <Technology techRef={techRef} />
           <Advantages advantagesRef={advantagesRef} />
           <HowWork howWorkRef={howWorkRef} />
           <Services />
           <UsefulInfo />
+          <SocialNetworksWith />
           <Packages getStarted={getStarted} packagesRef={packagesRef} />
           <Examples />
           <Awards />
           <SettingUp />
           <Contacts getStarted={getStarted} contactRef={contactRef} />
-        </div>
+        </main>
 
         <Footer />
       </div>
