@@ -67,9 +67,9 @@ export const HomePage = ({ getStarted }) => {
               className={`HomePage__ellipse HomePage__ellipse--${ellipse}`}
             />
           ))}
-          {/* {apps.map(app => (
+          {apps.map(app => (
             <div key={app} className={`HomePage__app HomePage__app--${app}`} />
-          ))} */}
+          ))}
         </div>
         <button
           type="button"

@@ -14,6 +14,10 @@
     min-height: max-content;
   }
 
+  @media (max-height: 801px) {
+    min-height: max-content;
+  }
+
   &__conteiner {
     position: relative;
     display: grid;
@@ -237,11 +241,15 @@
       display: block;
     }
 
+    @include mobile {
+      display: none;
+    }
+
     &--1 {
      @include adaptiv-value("width", 77.4, 48.3, 0);
       @include adaptiv-value("height", 77.4, 48.3, 0);
-      top: 28.8px;
-      right: 37vw;
+      top: 5%;
+      left: 21%;
       @include animation('scaleReduce 2s infinite alternate');
 
       &::after {
@@ -252,64 +260,64 @@
     &--2 {
       @include adaptiv-value("width", 110.4, 69, 0);
       @include adaptiv-value("height", 110.4, 69, 0);
-      top: 134.4px;
-      right: 38.5vw;
+      top: 20%;
+      left: 16%;
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
         content: url('../../images/appsIcons/image2.svg');
+      }
+
+      @include iPad {
+        display: none;
       }
     }
 
     &--3 {
       @include adaptiv-value("width", 64.8, 40.5, 0);
       @include adaptiv-value("height", 64.8, 40.5, 0);
-      top: 249.3px;
-      right: 47.2vw;
+      top: 38%;
+      left: 8%;
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
         content: url('../../images/appsIcons/image3.svg');
-      }
-
-      @include tablet {
-        display: none;
       }
     }
 
     &--4 {
       @include adaptiv-value("width", 105.6, 66, 0);
       @include adaptiv-value("height", 105.6, 66, 0);
-      top: 293.7px;
-      right: 38.8vw;
+      top: 45%;
+      left: 18%;
       @include animation('scaleReduce 2s infinite alternate');
 
       &::after {
         content: url('../../images/appsIcons/image4.svg');
+      }
+
+      @include iPad {
+        display: none;
       }
     }
 
     &--5 {
       @include adaptiv-value("width", 112, 70, 0);
       @include adaptiv-value("height", 112, 70, 0);
-      top: 412.5px;
-      right: 44.4vw;
+      top: 64%;
+      left: 6%;
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
         content: url('../../images/appsIcons/image5.svg');
-      }
-
-      @include tablet {
-        display: none;
       }
     }
 
     &--6 {
       @include adaptiv-value("width", 95.4, 59.6, 0);
       @include adaptiv-value("height", 95.4, 59.6, 0);
-      top: 79.8px;
-      right: 14.4vw;
+      top: 12%;
+      right: 20%;
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
@@ -320,53 +328,58 @@
     &--7 {
       @include adaptiv-value("width", 117.6, 73.5, 0);
       @include adaptiv-value("height", 117.6, 73.5, 0);
-      top: 192.75px;
-      right: 7.8vw;
+      top: 30%;
+      right: 7%;
       @include animation('scaleReduce 2s infinite alternate');
 
       &::after {
         content: url('../../images/appsIcons/image7.svg');
       }
+
     }
 
     &--8 {
       @include adaptiv-value("width", 64.8, 40.5, 0);
       @include adaptiv-value("height", 64.8, 40.5, 0);
-      top: 222.3px;
-      right: 19.4vw;
+      top: 34%;
+      right: 29%;
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
         content: url('../../images/appsIcons/image8.svg');
+      }
+
+      @include iPad {
+        display: none;
       }
     }
 
     &--9 {
       @include adaptiv-value("width", 94.2, 58.8, 0);
       @include adaptiv-value("height", 94.2, 58.8, 0);
-      top: 323.3px;
-      right: 13.3vw;
+      top: 50%;
+      right: 18%;
       @include animation('scaleReduce 2s infinite alternate');
       z-index: 4;
 
       &::after {
         content: url('../../images/appsIcons/image9.svg');
       }
+
+      @include iPad {
+        display: none;
+      }
     }
 
     &--10 {
       @include adaptiv-value("width", 119.5, 74.7, 0);
       @include adaptiv-value("height", 119.5, 74.7, 0);
-      top: 455.7px;
-      right: 7.8vw;
+      top: 71%;
+      right: 7.5%;
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
         content: url('../../images/appsIcons/image10.svg');
-      }
-
-      @include tablet {
-        display: none;
       }
     }
   }
