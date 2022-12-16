@@ -5,17 +5,18 @@
 .HomePage {
   display: grid;
   min-height: calc(100vh - 100px);
+  max-height: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 
   @include mobile {
-    min-height: max-content;
+    min-height: unset;
   }
 
   @media (max-height: 801px) {
-    min-height: max-content;
+    min-height: unset;
   }
 
   &__conteiner {
@@ -86,23 +87,14 @@
   &__decoration {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-
-    &::before {
-      content: '';
-      display: block;
-      border: 0.93px solid rgba(255, 139, 163, 1);
-      border-radius: 50%;
-    }
+    border: 0.93px solid rgba(255, 139, 163, 1);
+    border-radius: 50%;
+    @include animation('decor 2s infinite alternate');
 
     &--1 {
       bottom: 47px;
-
-      &::before {
-        @include adaptiv-value("width", 458, 229, 0);
-        @include adaptiv-value("height", 458, 229, 0);
-        @include animation('decor 2s infinite alternate');
-      }
+      @include adaptiv-value("width", 458, 229, 0);
+      @include adaptiv-value("height", 458, 229, 0);
 
       @include mobile {
         display: none;
@@ -111,12 +103,8 @@
 
     &--2 {
       bottom: -56px;
-
-      &::before {
-        @include adaptiv-value("width", 665, 332, 0);
-        @include adaptiv-value("height", 665, 332, 0);
-        @include animation('decor 2s infinite alternate');
-      }
+      @include adaptiv-value("width", 665, 332, 0);
+      @include adaptiv-value("height", 665, 332, 0);
 
       @media screen and (max-width: 1023px) {
         display: none;
@@ -125,12 +113,8 @@
 
     &--3 {
       bottom: -150px;
-
-      &::before {
-        @include adaptiv-value("width", 852, 426, 0);
-        @include adaptiv-value("height", 852, 426, 0);
-        @include animation('decor 2s infinite alternate');
-      }
+      @include adaptiv-value("width", 852, 426, 0);
+      @include adaptiv-value("height", 852, 426, 0);
 
       @media screen and (max-width: 1279px) {
         display: none;
