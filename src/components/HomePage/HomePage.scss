@@ -239,6 +239,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       display: block;
+      width: 60%;
+      height: 60%;
     }
 
     @include mobile {
@@ -253,7 +255,10 @@
       @include animation('scaleReduce 2s infinite alternate');
 
       &::after {
-        content: url('../../images/appsIcons/image1.svg');
+        background: url('../../images/appsIcons/image1.svg') no-repeat center;
+        background-size: contain;
+        width: 80%;
+        height: 80%;
       }
     }
 
@@ -265,7 +270,8 @@
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
-        content: url('../../images/appsIcons/image2.svg');
+        background: url('../../images/appsIcons/image2.svg') no-repeat center;
+        background-size: contain;
       }
 
       @include iPad {
@@ -281,7 +287,8 @@
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
-        content: url('../../images/appsIcons/image3.svg');
+        background: url('../../images/appsIcons/image3.svg') no-repeat center;
+        background-size: contain;
       }
     }
 
@@ -293,7 +300,8 @@
       @include animation('scaleReduce 2s infinite alternate');
 
       &::after {
-        content: url('../../images/appsIcons/image4.svg');
+        background: url('../../images/appsIcons/image4.svg') no-repeat center;
+        background-size: contain;
       }
 
       @include iPad {
@@ -309,7 +317,8 @@
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
-        content: url('../../images/appsIcons/image5.svg');
+        background: url('../../images/appsIcons/image5.svg') no-repeat center;
+        background-size: contain;
       }
     }
 
@@ -321,7 +330,8 @@
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
-        content: url('../../images/appsIcons/image6.svg');
+        background: url('../../images/appsIcons/image6.svg') no-repeat center;
+        background-size: contain;
       }
     }
 
@@ -333,7 +343,8 @@
       @include animation('scaleReduce 2s infinite alternate');
 
       &::after {
-        content: url('../../images/appsIcons/image7.svg');
+        background: url('../../images/appsIcons/image7.svg') no-repeat center;
+        background-size: contain;
       }
 
     }
@@ -346,7 +357,8 @@
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
-        content: url('../../images/appsIcons/image8.svg');
+        background: url('../../images/appsIcons/image8.svg') no-repeat center;
+        background-size: contain;
       }
 
       @include iPad {
@@ -363,7 +375,8 @@
       z-index: 4;
 
       &::after {
-        content: url('../../images/appsIcons/image9.svg');
+        background: url('../../images/appsIcons/image9.svg') no-repeat center;
+        background-size: contain;
       }
 
       @include iPad {
@@ -379,7 +392,8 @@
       @include animation('scaleAdd 2s infinite alternate');
 
       &::after {
-        content: url('../../images/appsIcons/image10.svg');
+        background: url('../../images/appsIcons/image10.svg') no-repeat center;
+        background-size: contain;
       }
     }
   }

@@ -11,7 +11,7 @@
   @include iPad {
     display: flex;
     flex-direction: column-reverse;
-    gap: 40px;
+    gap: 0;
   }
 
   @include mobile {
@@ -27,12 +27,13 @@
     align-items: center;
     justify-content: center;
     @include adaptiv-value("gap", 22, 18, 0);
-    @include adaptiv-value("height", 515, 343, 0);
-    width: max-content;
+    height: 525px;
+    width: 460px;
 
     @include iPad {
       margin: 0 auto;
       align-self: center;
+      height: 500px;
     }
 
     @include mobile {
@@ -43,10 +44,12 @@
   &__img {
     z-index: 1;
     position: relative;
-    background-size: contain;
 
     &--1 {
       background: url('../../images/technology/1.png') no-repeat center;
+      background-size: contain;
+      // height: 134px;
+      // width: 193px;
       @include adaptiv-value("height", 134, 84, 0);
       @include adaptiv-value("width", 193, 120, 0);
       border-radius: 24px;
@@ -64,8 +67,11 @@
 
     &--2 {
       background: url('../../images/technology/4.png') no-repeat center;
+      background-size: contain;
       @include adaptiv-value("height", 192, 120, 0);
       @include adaptiv-value("width", 223, 139, 0);
+      // height: 192px;
+      // width: 223px;
       border-radius: 30px;
 
       &::before {
@@ -81,8 +87,9 @@
 
     &--3 {
       background: url('../../images/technology/2.png') no-repeat center;
-      @include adaptiv-value("height", 338, 102, 0);
-      @include adaptiv-value("width", 314, 95, 0);
+      background-size: contain;
+      @include adaptiv-value("height", 338, 211, 0);
+      @include adaptiv-value("width", 314, 196, 0);
       border-radius: 30px;
 
       &::before {
@@ -97,6 +104,7 @@
 
     &--4 {
       background: url('../../images/technology/3.png') no-repeat center;
+      background-size: contain;
       @include adaptiv-value("height", 155, 97, 0);
       @include adaptiv-value("width", 223, 139, 0);
       border-radius: 30px;

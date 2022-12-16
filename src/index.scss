@@ -51,3 +51,18 @@ button {
 img {
   vertical-align: top;
 }
+
+// параметри для скрол //
+::-webkit-scrollbar {
+  height: 12px;
+  width: 6px;
+  background-color: rgba(239, 239, 239, 1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $orange;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $dark;
+}
