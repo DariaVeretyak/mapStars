@@ -42,9 +42,15 @@
     }
   }
 
+  &__infoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 16px;
+  }
+
   &__info {
     color: $dark;
-    padding-top: 16px;
     @include adaptiv-value("font-size", 17, 15, 0);
     line-height: 150%;
 

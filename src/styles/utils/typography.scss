@@ -1,16 +1,16 @@
 @font-face {
   font-family: 'TTFirsNeue';
-  src: url('../../fonts/qaefqs-ttfirsneue-regular.ttf');
+  src: url('../../fonts/ttfirsneue-regular.ttf');
 }
 
 @font-face {
   font-family: 'TTFirsNeueMedium';
-  src: url('../../fonts/FontsFree-Net-TTFirsNeue2.ttf');
+  src: url('../../fonts/ttfirsneue-demibold.ttf');
 }
 
 @font-face {
   font-family: 'Gilroy', sans-serif;
-  src: url('../../fonts/Gilroy-ExtraBold.otf');
+  src: url('../../fonts/gilroy-semibold.ttf') format("ttf");
 }
 
 @mixin h1 {
@@ -47,6 +47,7 @@
 }
 
 @mixin h3 {
+  font-family: 'TTFirsNeueMedium', serif;
   @include adaptiv-value("font-size", 36, 18, 0);
   line-height: 129%;
   font-weight: 600;

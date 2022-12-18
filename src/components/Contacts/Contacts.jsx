@@ -16,7 +16,6 @@ export const Contacts = ({ getStarted, contactRef }) => (
         <a
           className="Contacts__link"
           href="tel:+351 913 448 547"
-          target="_blank"
           rel="noopener noreferrer"
         >
           +351 913 448 547

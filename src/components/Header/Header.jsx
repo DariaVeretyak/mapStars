@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
+import logo from '../../images/logo.svg';
+import logoWhite from '../../images/logo-white.svg';
 import './Header.scss';
 
 export const Header = ({
@@ -24,6 +26,14 @@ export const Header = ({
     });
   };
 
+  const handleScrollTop = (ref) => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
+
   // #region changeLanguage
   const languages = ['Eng', 'Ukr', 'Rus', 'Ger'];
   const [languagesChoose, setLanguagesChoose] = useState(languages[0]);
@@ -38,14 +48,23 @@ export const Header = ({
   return (
     <header className="Header">
       <div className="Header__conteiner">
-        <div
-          className={
-            classNames(`Header__logo + ${menuOpen
-              ? 'Header__logo--open'
-              : ''
-            }`)
-          }
-        />
+        <Link
+          className="Header__logo"
+          to="/"
+          onClick={() => handleScrollTop()}
+        >
+          {menuOpen ? (
+            <img
+              src={logoWhite}
+              alt="logo"
+            />
+          ) : (
+            <img
+              src={logo}
+              alt="logo"
+            />
+          )}
+        </Link>
 
         <nav
           className={
@@ -204,7 +223,10 @@ export const Header = ({
 
 Header.propTypes = {
   getStarted: PropTypes.func.isRequired,
-  techRef: PropTypes.string.isRequired,
+  techRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
   advantagesRef: PropTypes.string.isRequired,
   howWorkRef: PropTypes.string.isRequired,
   packagesRef: PropTypes.string.isRequired,

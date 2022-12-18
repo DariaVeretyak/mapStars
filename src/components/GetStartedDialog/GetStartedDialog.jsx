@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -15,6 +15,8 @@ export const GetStartedDialog = ({ closeDialog }) => {
   } = useForm({
     mode: 'onBlur',
   });
+
+  const [isAccept, setIsAccept] = useState(false);
 
   const onSubmit = () => {
     // const newMessage = {
@@ -40,7 +42,11 @@ export const GetStartedDialog = ({ closeDialog }) => {
     // };
     // postNewMessage(message);
 
+    setIsAccept(true);
     reset();
+    setTimeout(() => {
+      setIsAccept(false);
+    }, 3000);
   };
 
   return (
@@ -121,6 +127,11 @@ export const GetStartedDialog = ({ closeDialog }) => {
           Send a Message
         </button>
       </form>
+      {isAccept && (
+        <p className="GetStartedDialog__accept">
+          Your application is accepted!
+        </p>
+      )}
     </div>
   );
 };

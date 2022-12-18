@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import logo from '../../images/logo.svg';
 import './Footer.scss';
 
-export const Footer = () => {
+export const Footer = ({ headerRef }) => {
   const [menuOpen] = useState(false);
+
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <footer className="Footer">
-      <a
-        href="#header"
+      <Link
+        to="/header"
+        onClick={() => handleScroll()}
       >
         <img
           className="Footer__logo"
           src={logo}
           alt="logo"
         />
-      </a>
+      </Link>
 
       <nav
         className={
@@ -90,4 +100,8 @@ export const Footer = () => {
       </div>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  headerRef: PropTypes.string.isRequired,
 };

@@ -39,10 +39,12 @@
   }
 
   &__step {
-    display: flex;
-    gap: 99px;
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 60px;
     padding: 0 95px 190px;
     width: 100%;
+    border-radius: 60px;
 
     @include tablet {
       padding: 0 60px 80px;
@@ -60,6 +62,7 @@
     }
 
     @include mobile {
+      display: flex;
       flex-direction: column;
       gap: 20px;
       padding: 20px;
@@ -73,116 +76,99 @@
     &--2 {
       @include adaptiv-value("padding-top", 140, 80, 0);
       background: rgba(234, 233, 251, 1);
-      border-radius: 60px;
+      grid-template-columns: 1.3fr 0.7fr;
+  
+      @include tablet {
+        padding-bottom: 160px;
+      }
+
+      @include iPad {
+        padding-bottom: 160px;
+      }
+
+      @include mobile {
+        padding-bottom: 110px;
+      }
     }
 
     &--3 {
       margin-top: -90px;
       @include adaptiv-value("padding-top", 140, 80, 0);
       background: rgba(229, 251, 241, 1);
-      border-radius: 60px;
     }
   }
 
   &__images {
+    display: flex;
     position: relative;
-    @include adaptiv-value("width", 421, 191, 0);
+    width: 100%;
     @include adaptiv-value("height", 568, 258, 0);
-    border-radius: 50px;
 
     @include mobile {
+      width: 60%;
       align-self: center;
     }
 
-    &--1 {
-      background: url(../../images/howWork1.png) no-repeat center;
-      background-size: contain;
+    @media (max-width: 499px) {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -52px;
+      display: block;
+      border-radius: 50px;
+
+      @include iPad {
+        display: none;
+      }
 
       @include mobile {
-        background-size: cover;
+        bottom: 20px;
       }
-  
+    }
+
+    &--1 {
       &::after {
-        position: absolute;
-        right: -39px;
-        bottom: -52px;
-        content: url(../../images/howWork2.png);
-        display: block;
-        border-radius: 50px;
+        right: 0;
+        background: url(../../images/howWork2.png);
+        background-size: cover;
         @include adaptiv-value("width", 332, 150, 0);
         @include adaptiv-value("height", 331, 149, 0);
-
-        @include tablet {
-          right: 0;
-        }
-
-        @include iPad {
-          right: -100%;
-          bottom: 0;
-        }
-
-        @include mobile {
-          content: '';
-        }
       }
     }
 
     &--2 {
-      background: url(../../images/howWork2_1.png) no-repeat center;
-      background-size: contain;
-
-      @include mobile {
-        background-size: cover;
-      }
+      justify-content: flex-end;
 
       &::after {
-        position: absolute;
-        left: -39px;
-        bottom: -52px;
-        content: url(../../images/howWork2_2.png);
-        border-radius: 50px;
+        left: 0;
+        background: url(../../images/howWork2_2.png);
+        background-size: cover;
         @include adaptiv-value("width", 332, 221, 0);
-        @include adaptiv-value("height", 331, 220, 0);
-
-        @include iPad {
-          left: auto;
-          right: -100%;
-          bottom: 0;
-        }
-
-        @include mobile {
-          content: '';
-        }
+        @include adaptiv-value("height", 292, 194, 0);
       }
     }
 
     &--3 {
-      margin-left: 39px;
-      background: url(../../images/howWork3_1.png) no-repeat center;
-      background-size: contain;
-
-      @include mobile {
-        margin-left: 0;
-        background-size: cover;
-      }
+      justify-content: flex-end;
 
       &::after {
-        position: absolute;
-        left: -39px;
-        bottom: -52px;
-        content: url(../../images/howWork3_2.png);
-        border-radius: 50px;
-
-        @include iPad {
-          left: auto;
-          right: -100%;
-          bottom: 0;
-        }
-
-        @include mobile {
-          content: '';
-        }
+        left: 0;
+        background: url(../../images/howWork3_2.png);
+        background-size: cover;
+        @include adaptiv-value("width", 332, 221, 0);
+        @include adaptiv-value("height", 284, 189, 0);
       }
     }
+  }
+
+  &__img {
+    position: relative;
+    width: 85%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50px;
   }
 }

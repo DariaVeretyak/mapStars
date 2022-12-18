@@ -5,18 +5,18 @@ import { Header } from './components/Header/Header';
 import { GetStartedDialog } from './components/GetStartedDialog';
 import { HomePage } from './components/HomePage';
 import { Technology } from './components/Technology';
-import { Advantages } from './components/Advantages/Advantages';
-import { HowWork } from './components/HowWork/HowWork';
+import { Advantages } from './components/Advantages';
+import { HowWork } from './components/HowWork';
 import { Services } from './components/Services';
 import { Packages } from './components/Packages';
 import { Examples } from './components/Examples';
 import { Awards } from './components/Awards/Awards';
 import { UsefulInfo } from './components/UsefulInfo';
-import { SettingUp } from './components/SettingUp';
-import { Contacts } from './components/Contacts/Contacts';
-import { Footer } from './components/Footer/Footer';
-import './App.scss';
 import { SocialNetworksWith } from './components/SocialNetworkWith';
+import { SettingUp } from './components/SettingUp';
+import { Contacts } from './components/Contacts';
+import { Footer } from './components/Footer';
+import './App.scss';
 
 const App = () => {
   const [openDialog, setOpenDialog] = useState(false);

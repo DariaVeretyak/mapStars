@@ -6,22 +6,25 @@ export const UsefulInfo = () => (
     <div className="UsefulInfo__content">
       <h4 className="UsefulInfo__subtitle">Useful information</h4>
       <h2 className="UsefulInfo__title">How does Google Search work?</h2>
-      <p className="UsefulInfo__info">
-        Today, the largest search resource on the planet is Google Search.
-        It is practically a monopoly in the field of information search.
-        That is why our company, when creating its GEO advertising technology,
-        used this system as a basis.
-        <br />
-        <br />
-        Let&apos;s figure out together how exactly Google Search works.
-        When a user enters a search query, Google Search processes it in less
-        than one second and returns the search results in a specific sequence.
-        <br />
-        <br />
-        Android phones, 75% of phones based on other systems, as well as
-        laptops and home computers use Google in one or another way.
-      </p>
-
+      <div className="UsefulInfo__infoBlock">
+        <p className="UsefulInfo__info">
+          Today, the largest search resource on the planet is Google Search.
+          It is practically a monopoly in the field of information search.
+          That is why our company, when creating its GEO advertising technology,
+          used this system as a basis.
+        </p>
+        <p className="UsefulInfo__info">
+          Let&apos;s figure out together how exactly Google Search works.
+        </p>
+        <p className="UsefulInfo__info">
+          When a user enters a search query, Google Search processes it in less
+          than one second and returns the search results in a specific sequence.
+        </p>
+        <p className="UsefulInfo__info">
+          Android phones, 75% of phones based on other systems, as well as
+          laptops and home computers use Google in one or another way.
+        </p>
+      </div>
       <div className="UsefulInfo__firstBlock">
         <h2 className="UsefulInfo__title UsefulInfo__title--firstBlock">
           First block:

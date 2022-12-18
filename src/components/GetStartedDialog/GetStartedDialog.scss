@@ -114,5 +114,11 @@
     color: red;
     text-align: right;
   }
+
+  &__accept {
+    text-align: center;
+    padding-top: 30px;
+    @include h3;
+  }
 }
 

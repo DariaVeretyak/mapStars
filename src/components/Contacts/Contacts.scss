@@ -76,7 +76,7 @@
   &__get-started {
     position: absolute;
     top: -5px;
-    right: 97px;
+    right: 102px;
     @include adaptiv-value("height", 255, 70, 0);
     @include adaptiv-value("width", 255, 120, 0);
     border-radius: 50%;
@@ -95,7 +95,7 @@
     @include mobile {
       right: 0;
       top: auto;
-      bottom: -100px;
+      bottom: -91px;
     }
   }
 }
