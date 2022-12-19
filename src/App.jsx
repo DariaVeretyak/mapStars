@@ -5,6 +5,7 @@ import { LangProvider } from './context/LangProvider';
 import { Header } from './components/Header/Header';
 import { MainPages } from './components/MainPages';
 import { GetStartedDialog } from './components/GetStartedDialog';
+import { SheduleCall } from './components/SheduleCall';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsOfService } from './components/TermsOfService';
 import { Footer } from './components/Footer';
@@ -24,6 +25,17 @@ const App = () => {
 
   const closeDialog = () => {
     setOpenDialog(false);
+  };
+
+  const [sheduleCall, setSheduleCall] = useState(false);
+
+  const orderCall = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    setSheduleCall(true);
+  };
+
+  const closeOrderCall = () => {
+    setSheduleCall(false);
   };
 
   const techRef = useRef(null);
@@ -52,6 +64,7 @@ const App = () => {
         />
 
         {openDialog && <GetStartedDialog closeDialog={closeDialog} />}
+        {sheduleCall && <SheduleCall closeOrderCall={closeOrderCall} />}
 
         <main className="App__mainBlock">
           <Routes>
@@ -80,7 +93,7 @@ const App = () => {
           </Routes>
         </main>
 
-        <Footer />
+        <Footer orderCall={orderCall} />
       </div>
     </LangProvider>
   );

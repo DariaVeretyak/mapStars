@@ -93,6 +93,7 @@
     border: 0.93px solid rgba(255, 139, 163, 1);
     border-radius: 50%;
     @include animation('decor 2s infinite alternate');
+    opacity: 0.93;
 
     &--1 {
       bottom: 47px;

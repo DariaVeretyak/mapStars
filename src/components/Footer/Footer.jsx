@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import logo from '../../images/logo.svg';
 import './Footer.scss';
 
-export const Footer = () => {
+export const Footer = ({ orderCall }) => {
   const [menuOpen] = useState(false);
 
   const handleScroll = () => {
@@ -56,12 +57,13 @@ export const Footer = () => {
             </Link>
           </li>
           <li className="Footer__nav-li">
-            <NavLink
-              to="/shedule"
+            <Link
+              to="/"
               className="Footer__link"
+              onClick={() => orderCall()}
             >
               Schedule a Call
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -103,6 +105,6 @@ export const Footer = () => {
   );
 };
 
-// Footer.propTypes = {
-//   headerRef: PropTypes.string.isRequired,
-// };
+Footer.propTypes = {
+  orderCall: PropTypes.func.isRequired,
+};

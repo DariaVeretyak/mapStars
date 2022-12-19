@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Autoplay,
   Pagination,
@@ -14,7 +15,7 @@ import 'swiper/modules/pagination/pagination.scss';
 
 import './Slider.scss';
 
-export const Slider = () => (
+export const Slider = ({ navigationPrevRef, navigationNextRef }) => (
   <Swiper
     autoplay={{
       delay: 5000,
@@ -28,8 +29,8 @@ export const Slider = () => (
       Keyboard,
     ]}
     navigation={{
-      prevEl: '.slider__prev',
-      nextEl: '.slider__next',
+      prevEl: navigationPrevRef.current,
+      nextEl: navigationNextRef.current,
     }}
     pagination={{ clickable: true }}
     mousewheel
@@ -146,5 +147,18 @@ export const Slider = () => (
         </div>
       </div>
     </SwiperSlide>
+    {/* <button type="button" className="Slider__btn Slider__prev" />
+    <button type="button" className="Slider__btn Slider__next" /> */}
   </Swiper>
 );
+
+Slider.propTypes = {
+  navigationPrevRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+  navigationNextRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+};

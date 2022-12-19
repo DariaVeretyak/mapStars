@@ -19,7 +19,6 @@ export const Header = ({
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleScroll = (ref) => {
-    // eslint-disable-next-line no-console
     window.scrollTo({
       top: ref.offsetTop,
       left: 0,
