@@ -124,10 +124,25 @@
 
   &__title {
     @include h2;
+
+    &:not(&:last-child) {
+      padding-bottom: 16px;
+    }
+  }
+
+  &__infoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__subtitle {
+    font-family: 'TTFirsNeue500';
+    font-size: 20px;
+    line-height: 150%;
   }
 
   &__info {
-    padding-top: 16px;
     font-size: 17px;
     line-height: 150%;
   }

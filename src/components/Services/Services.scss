@@ -46,6 +46,7 @@
   }
 
   &__subtitle {
+    font-family: 'TTFirsNeueMedium';
     @include adaptiv-value("font-size", 46, 28, 0);
     line-height: 129%;
     margin-top: -48px;

@@ -23,20 +23,20 @@ export const Technology = ({ techRef }) => {
         <h2 className="Technology__title">
           Technology
         </h2>
-        <span className="Technology__info">
-          <strong>
+        <div className="Technology__infoBlock">
+          <p className="Technology__subtitle">
             GEO advertising is a technology for the automatic promotion of a
             business using modern technologies and services.
-          </strong>
-          <br />
-          <br />
-          The technology is specially made to promote almost all types of
-          businesses. Cafes, restaurants, beauty salons and hairdressers, hotels
-          and hostels, service stations and tire shops, repair service centers,
-          online stores, grocery stores, supermarkets, photo studios, publishing
-          houses, confectioneries, and many others have already used the
-          technology.
-        </span>
+          </p>
+          <p className="Technology__info">
+            The technology is specially made to promote almost all types of
+            businesses. Cafes, restaurants, beauty salons and hairdressers, hotels
+            and hostels, service stations and tire shops, repair service centers,
+            online stores, grocery stores, supermarkets, photo studios, publishing
+            houses, confectioneries, and many others have already used the
+            technology.
+          </p>
+        </div>
       </div>
     </section>
   );
