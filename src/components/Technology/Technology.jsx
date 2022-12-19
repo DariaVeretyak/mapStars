@@ -30,11 +30,11 @@ export const Technology = ({ techRef }) => {
           </p>
           <p className="Technology__info">
             The technology is specially made to promote almost all types of
-            businesses. Cafes, restaurants, beauty salons and hairdressers, hotels
-            and hostels, service stations and tire shops, repair service centers,
-            online stores, grocery stores, supermarkets, photo studios, publishing
-            houses, confectioneries, and many others have already used the
-            technology.
+            businesses. Cafes, restaurants, beauty salons and hairdressers,
+            hotels and hostels, service stations and tire shops, repair
+            service centers, online stores, grocery stores, supermarkets,
+            photo studios, publishing houses, confectioneries, and many
+            others have already used the technology.
           </p>
         </div>
       </div>
