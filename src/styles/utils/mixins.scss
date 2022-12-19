@@ -67,7 +67,7 @@
   border-radius: 30px;
   width: max-content;
   color: #fff;
-  font-family: 'TTFirsNeueMedium', serif;
+  font-family: 'TTFirsNeue500';
   font-weight: 500;
   font-size: 16px;
 }
@@ -178,11 +178,11 @@
 @include keyframes(decor) {
   0% {
     transform: scale(1) translateX(-50%);
-    opacity: 50%;
+    // opacity: 50%;
   }
   100% {
     transform: scale(0.93) translateX(-50%);
-    opacity: 80%;
+    // opacity: 80%;
   }
 }
 

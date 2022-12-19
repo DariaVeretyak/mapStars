@@ -54,7 +54,10 @@
   }
 
   &__subtitle {
-    @include h4;
+    font-family: 'TTFirsNeue';
+    @include adaptiv-value("font-size", 24, 16, 0);
+    line-height: 116%;
+    font-weight: 400;
     color: #fff;
     padding-top: 16px;
   }

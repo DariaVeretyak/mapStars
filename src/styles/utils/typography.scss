@@ -9,12 +9,17 @@
 }
 
 @font-face {
+  font-family: 'TTFirsNeue500';
+  src: url('../../fonts/TTFirsNeue-Medium.woff');
+}
+
+@font-face {
   font-family: 'Gilroy', sans-serif;
   src: url('../../fonts/gilroy-semibold.ttf') format("ttf");
 }
 
 @mixin h1 {
-  font-family: 'TTFirsNeueMedium', serif;
+  font-family: 'TTFirsNeue500';
   @include adaptiv-value("font-size", 76, 36, 0);
   font-weight: 500;
   line-height: 100%;
