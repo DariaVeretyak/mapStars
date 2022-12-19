@@ -10,7 +10,7 @@ export const Technology = ({ techRef }) => {
   }
 
   return (
-    <section className="Technology App__section" id="technology" ref={techRef}>
+    <section className="Technology App__section" ref={techRef}>
       <div className="Technology__images">
         {images.map(img => (
           <div
@@ -43,5 +43,8 @@ export const Technology = ({ techRef }) => {
 };
 
 Technology.propTypes = {
-  techRef: PropTypes.string.isRequired,
+  techRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
 };

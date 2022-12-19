@@ -154,5 +154,8 @@ export const HowWork = ({ howWorkRef }) => (
 );
 
 HowWork.propTypes = {
-  howWorkRef: PropTypes.string.isRequired,
+  howWorkRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
 };

@@ -25,5 +25,8 @@ export const Advantages = ({ advantagesRef }) => (
 );
 
 Advantages.propTypes = {
-  advantagesRef: PropTypes.string.isRequired,
+  advantagesRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
 };

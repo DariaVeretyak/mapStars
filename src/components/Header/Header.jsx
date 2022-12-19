@@ -19,6 +19,7 @@ export const Header = ({
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleScroll = (ref) => {
+    // eslint-disable-next-line no-console
     window.scrollTo({
       top: ref.offsetTop,
       left: 0,
@@ -26,7 +27,7 @@ export const Header = ({
     });
   };
 
-  const handleScrollTop = (ref) => {
+  const handleScrollTop = () => {
     window.scrollTo({
       top: 0,
       left: 0,
@@ -55,11 +56,13 @@ export const Header = ({
         >
           {menuOpen ? (
             <img
+              className="Header__logo-img"
               src={logoWhite}
               alt="logo"
             />
           ) : (
             <img
+              className="Header__logo-img"
               src={logo}
               alt="logo"
             />
@@ -90,10 +93,10 @@ export const Header = ({
                     : ''
                   }`)
                 }
-                to="/technology"
+                to="/"
                 onClick={() => {
-                  handleScroll(techRef.current);
                   setMenuOpen(false);
+                  handleScroll(techRef.current);
                 }}
               >
                 Technology
@@ -101,7 +104,7 @@ export const Header = ({
             </li>
             <li className="Header__nav-li">
               <Link
-                to="/advantages"
+                to="/"
                 className={
                   classNames(`Header__link + ${menuOpen
                     ? 'Header__link--open'
@@ -118,7 +121,7 @@ export const Header = ({
             </li>
             <li className="Header__nav-li">
               <Link
-                to="/howWorks"
+                to="/"
                 className={
                   classNames(`Header__link + ${menuOpen
                     ? 'Header__link--open'
@@ -135,7 +138,7 @@ export const Header = ({
             </li>
             <li className="Header__nav-li">
               <Link
-                to="/packages"
+                to="/"
                 className={
                   classNames(`Header__link + ${menuOpen
                     ? 'Header__link--open'
@@ -152,7 +155,7 @@ export const Header = ({
             </li>
             <li className="Header__nav-li">
               <Link
-                to="/contact"
+                to="/"
                 className={
                   classNames(`Header__link + ${menuOpen
                     ? 'Header__link--open'
@@ -227,8 +230,20 @@ Header.propTypes = {
     PropTypes.func, // for legacy refs
     PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   ]).isRequired,
-  advantagesRef: PropTypes.string.isRequired,
-  howWorkRef: PropTypes.string.isRequired,
-  packagesRef: PropTypes.string.isRequired,
-  contactRef: PropTypes.string.isRequired,
+  advantagesRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+  howWorkRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+  packagesRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
+  contactRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
 };

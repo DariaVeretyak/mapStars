@@ -23,6 +23,10 @@ export const Examples = () => (
         </div>
       </div>
       <Slider />
+      <div className="Slider__actions">
+        <button type="button" className="Slider__btn Slider__prev" />
+        <button type="button" className="Slider__btn Slider__next" />
+      </div>
     </div>
   </section>
 );

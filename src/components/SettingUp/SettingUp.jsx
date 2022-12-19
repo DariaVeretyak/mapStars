@@ -25,7 +25,12 @@ export const SettingUp = () => {
             AdWords ads
           </button>
           <button
-            className="SettingUp__btn"
+            className={
+              classNames(`SettingUp__btn + ${isBooking
+                ? 'SettingUp__btn--active'
+                : ''
+              }`)
+            }
             type="button"
             onClick={() => setIsBooking(true)}
           >

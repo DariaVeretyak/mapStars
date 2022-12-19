@@ -15,6 +15,7 @@
   }
 
   &__content {
+    position: relative;
     display: flex;
     padding-top: 30px;
     @include adaptiv-value("gap", 60, 30, 0);

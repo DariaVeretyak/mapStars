@@ -68,12 +68,10 @@
     line-height: 129%;
     font-weight: 600;
     color: #fff;
-
-    &--booking {
-      border-bottom: 2px solid transparent;
-    }
+    border-bottom: 2px solid transparent;
 
     &:hover,
+    &:active,
     &--active {
       background: -webkit-linear-gradient(103.85deg, #FA8550 0%, #F33F5E 100%);
       -webkit-background-clip: text;

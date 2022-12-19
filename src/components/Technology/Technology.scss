@@ -4,13 +4,13 @@
 
 .Technology {
   display: grid;
-  align-items: center;
   grid-template-columns: 0.9fr 1.1fr;
   @include adaptiv-value("gap", 100, 30, 0);
 
   @include iPad {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
     gap: 0;
   }
 

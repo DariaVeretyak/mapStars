@@ -44,7 +44,7 @@ export const HomePage = ({ getStarted }) => {
           <button
             className="HomePage__btn"
             type="button"
-            onClick={() => getStarted()}
+            onClick={getStarted}
           >
             Get started
             <span>

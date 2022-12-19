@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import logo from '../../images/logo.svg';
 import './Footer.scss';
 
-export const Footer = ({ headerRef }) => {
+export const Footer = () => {
   const [menuOpen] = useState(false);
 
   const handleScroll = () => {
@@ -18,8 +17,8 @@ export const Footer = ({ headerRef }) => {
 
   return (
     <footer className="Footer">
-      <Link
-        to="/header"
+      <NavLink
+        to="/"
         onClick={() => handleScroll()}
       >
         <img
@@ -27,7 +26,7 @@ export const Footer = ({ headerRef }) => {
           src={logo}
           alt="logo"
         />
-      </Link>
+      </NavLink>
 
       <nav
         className={
@@ -39,20 +38,22 @@ export const Footer = ({ headerRef }) => {
       >
         <ul className="Footer__nav-ul">
           <li className="Footer__nav-li">
-            <NavLink
-              href="/privacy"
+            <Link
+              to="/policy"
               className="Footer__link"
+              onClick={() => handleScroll()}
             >
               Privacy Policy
-            </NavLink>
+            </Link>
           </li>
           <li className="Footer__nav-li">
-            <NavLink
+            <Link
               to="/terms"
               className="Footer__link"
+              onClick={() => handleScroll()}
             >
               Terms of Service
-            </NavLink>
+            </Link>
           </li>
           <li className="Footer__nav-li">
             <NavLink
@@ -102,6 +103,6 @@ export const Footer = ({ headerRef }) => {
   );
 };
 
-Footer.propTypes = {
-  headerRef: PropTypes.string.isRequired,
-};
+// Footer.propTypes = {
+//   headerRef: PropTypes.string.isRequired,
+// };

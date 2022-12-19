@@ -39,5 +39,8 @@ export const Packages = ({ getStarted, packagesRef }) => (
 
 Packages.propTypes = {
   getStarted: PropTypes.func.isRequired,
-  packagesRef: PropTypes.objectOf(PropTypes.string).isRequired,
+  packagesRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
 };

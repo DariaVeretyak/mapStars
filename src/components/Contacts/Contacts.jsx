@@ -58,5 +58,8 @@ export const Contacts = ({ getStarted, contactRef }) => (
 
 Contacts.propTypes = {
   getStarted: PropTypes.func.isRequired,
-  contactRef: PropTypes.string.isRequired,
+  contactRef: PropTypes.oneOfType([
+    PropTypes.func, // for legacy refs
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]).isRequired,
 };
