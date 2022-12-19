@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.57562193.chunk.css",
+    "main.css": "./static/css/main.654f61f5.chunk.css",
     "main.js": "./static/js/main.26a610d8.chunk.js",
     "main.js.map": "./static/js/main.26a610d8.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.811a5bd4.js",
@@ -10,16 +10,16 @@
     "static/js/2.82e947de.chunk.js.map": "./static/js/2.82e947de.chunk.js.map",
     "index.html": "./index.html",
     "static/css/2.464016d2.chunk.css.map": "./static/css/2.464016d2.chunk.css.map",
-    "static/css/main.57562193.chunk.css.map": "./static/css/main.57562193.chunk.css.map",
+    "static/css/main.654f61f5.chunk.css.map": "./static/css/main.654f61f5.chunk.css.map",
     "static/js/2.82e947de.chunk.js.LICENSE.txt": "./static/js/2.82e947de.chunk.js.LICENSE.txt",
     "static/media/Awards.scss": "./static/media/8.263f6b9b.svg",
     "static/media/Technology.scss": "./static/media/5.e3a994c0.png",
     "static/media/UsefulInfo.scss": "./static/media/MacBook.ef215540.png",
+    "static/media/Footer.scss": "./static/media/twitter-logo.76e660b9.svg",
     "static/media/Advantages.scss": "./static/media/price.7f3924b0.svg",
     "static/media/Services.scss": "./static/media/whatsApp.9a85bbd7.svg",
     "static/media/Examples.scss": "./static/media/logoExample.1874eeaf.svg",
     "static/media/Packages.scss": "./static/media/check.b1136cba.svg",
-    "static/media/Footer.scss": "./static/media/twitter-logo.76e660b9.svg",
     "static/media/Header.scss": "./static/media/globe.6e906a1b.svg",
     "static/media/homePage.00fd5450.png": "./static/media/homePage.00fd5450.png",
     "static/media/howWork1.05ce93bb.jpg": "./static/media/howWork1.05ce93bb.jpg",
@@ -39,7 +39,7 @@
     "static/js/runtime-main.811a5bd4.js",
     "static/css/2.464016d2.chunk.css",
     "static/js/2.82e947de.chunk.js",
-    "static/css/main.57562193.chunk.css",
+    "static/css/main.654f61f5.chunk.css",
     "static/js/main.26a610d8.chunk.js"
   ]
 }
