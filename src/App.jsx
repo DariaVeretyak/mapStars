@@ -48,7 +48,7 @@ const App = () => {
     <LangProvider>
       <div
         className={
-          classNames(`App + ${openDialog
+          classNames(`App + ${openDialog || sheduleCall
             ? 'App--dialog'
             : ''
           }`)

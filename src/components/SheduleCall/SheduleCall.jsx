@@ -94,7 +94,7 @@ export const SheduleCall = ({ closeOrderCall }) => {
             <input
               className="SheduleCall__input"
               type="tel"
-              placeholder="Phone"
+              placeholder="Phone*"
               {...register('phone', {
                 required: 'Field is mandatory',
                 pattern: {
