@@ -19,7 +19,6 @@ const App = () => {
   };
 
   const getStarted = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     getOpenDialog();
   };
 
@@ -30,7 +29,7 @@ const App = () => {
   const [sheduleCall, setSheduleCall] = useState(false);
 
   const orderCall = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    // window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     setSheduleCall(true);
   };
 
@@ -63,10 +62,9 @@ const App = () => {
           getStarted={getStarted}
         />
 
-        {openDialog && <GetStartedDialog closeDialog={closeDialog} />}
-        {sheduleCall && <SheduleCall closeOrderCall={closeOrderCall} />}
-
         <main className="App__mainBlock">
+          {openDialog && <GetStartedDialog closeDialog={closeDialog} />}
+          {sheduleCall && <SheduleCall closeOrderCall={closeOrderCall} />}
           <Routes>
             <Route
               path="/"
