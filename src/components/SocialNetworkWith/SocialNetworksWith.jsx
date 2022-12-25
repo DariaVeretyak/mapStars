@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import image from '../../images/networks.png';
 import './SocialNetworksWith.scss';
 
@@ -12,12 +13,14 @@ export const SocialNetworksWith = () => (
       />
     </div>
     <div className="SocialNetworksWith__content">
-      <h2 className="SocialNetworksWith__title">
-        <span className="SocialNetworksWith__title--span">
-          Social networks &nbsp;
-        </span>
-        with GEO advertising technology
-      </h2>
+      <Fade delay={300} bottom>
+        <h2 className="SocialNetworksWith__title">
+          <span className="SocialNetworksWith__title--span">
+            Social networks &nbsp;
+          </span>
+          with GEO advertising technology
+        </h2>
+      </Fade>
       <p className="SocialNetworksWith__info">
         Any business seeks to make a profit through customer satisfaction.
         But satisfying such needs, no business seeks to use the client to

@@ -41,8 +41,8 @@
     border: 1px solid rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.26);
     padding: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    // cursor: pointer;
+    // transition: all 0.3s ease;
 
     &--1 {
       background: url(../../images/awards-icons/1.svg) no-repeat center;
@@ -84,8 +84,8 @@
       background-size: 70% 70%;
     }
 
-    &:hover {
-      box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.6);
-    }
+    // &:hover {
+    //   box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.6);
+    // }
   }
 }

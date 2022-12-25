@@ -3,13 +3,18 @@
 @import "../../styles/utils/mixins.scss";
 
 .HowWork {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(255, 247, 248, 1);
   @include widthConteiner;
   margin: 120px auto 0;
-  border-radius: 60px;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 900px;
+    // @include adaptiv-value("padding-top", 80, 40, 0);
+    overflow: auto;
+  }
 
   @media (max-width: 1349px) and (min-width: 767px) {
     margin: 70px auto 30px;
@@ -23,24 +28,24 @@
 
   &__title {
     @include h2;
-    @include adaptiv-value("padding-top", 80, 20, 0);
   }
 
   &__steps {
     padding-top: 12px;
     @include adaptiv-value("font-size", 22, 18, 0);
-  }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    @include adaptiv-value("padding-top", 46, 20, 0);
+    &:not(:last-child) {
+      padding-bottom: 46px;
+    }
   }
 
   &__step {
+    position: sticky;
+    bottom: 0;
     display: grid;
+    height: 900px;
     grid-template-columns: 0.7fr 1.3fr;
+    justify-items: center;
     gap: 60px;
     padding: 0 95px 190px;
     width: 100%;
@@ -73,29 +78,48 @@
       }
     }
 
+    &--1 {
+      background: rgba(255, 247, 248, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      justify-content: center;
+      z-index: 3;
+      @include adaptiv-value("padding-top", 80, 20, 0);
+    }
+
     &--2 {
       @include adaptiv-value("padding-top", 140, 80, 0);
       background: rgba(234, 233, 251, 1);
       grid-template-columns: 1.3fr 0.7fr;
   
-      @include tablet {
-        padding-bottom: 160px;
-      }
+      // @include tablet {
+      //   padding-bottom: 160px;
+      // }
 
-      @include iPad {
-        padding-bottom: 160px;
-      }
+      // @include iPad {
+      //   padding-bottom: 160px;
+      // }
 
-      @include mobile {
-        padding-bottom: 110px;
-      }
+      // @include mobile {
+      //   padding-bottom: 110px;
+      // }
+      z-index: 2;
     }
 
     &--3 {
-      margin-top: -90px;
       @include adaptiv-value("padding-top", 140, 80, 0);
       background: rgba(229, 251, 241, 1);
+      z-index: 1;
+      // padding-bottom: 140px;
     }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 60px;
   }
 
   &__images {
@@ -171,4 +195,8 @@
     object-fit: contain;
     border-radius: 50px;
   }
+}
+
+.HowWork__content::-webkit-scrollbar {
+  display: none;
 }

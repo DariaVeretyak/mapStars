@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import { Slider } from '../Slider/Slider';
 import './Examples.scss';
 
@@ -8,7 +9,9 @@ export const Examples = () => {
 
   return (
     <section className="Examples App__section">
-      <h2 className="Examples__title">Implementation examples</h2>
+      <Fade delay={300} bottom>
+        <h2 className="Examples__title">Implementation examples</h2>
+      </Fade>
       <div className="Examples__content">
         <div className="Examples__prev">
           <div className="Examples__block">

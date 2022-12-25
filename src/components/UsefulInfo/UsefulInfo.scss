@@ -4,23 +4,49 @@
 
 .UsefulInfo {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  height: 963px;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 110px;
 
-  &__content {
+  &__swiper {
     display: flex;
     flex-direction: column;
-    width: 560px;
-    @include adaptiv-value("padding-top", 139, 20, 0);
-    padding-right: 20px;
+    @include adaptiv-value("padding-top", 100, 20, 0);
+    // overflow-y: scroll;
+    height: 720px;
 
-    @media (max-width: 1023px) {
-      width: 100%;
-      padding-right: 0;
-    }
+    // @media (max-width: 1023px) {
+    //   width: 100%;
+    //   padding-right: 0;
+    // }
   }
+
+  // &__block {
+  //   display: flex;
+  //   flex-direction: column;
+  //   position: sticky;
+  //   bottom: 0;
+  //   background-color: #fff;
+  //   height: 100%;
+  //   padding-top: 40px;
+  //   padding-bottom: 40px;
+
+  //   &--main {
+  //     z-index: 4;
+  //   }
+
+  //   &--first {
+  //     z-index: 3;
+  //   }
+
+  //   &--second {
+  //     z-index: 2;
+  //   }
+
+  //   &--third {
+  //     z-index: 1;
+  //   }
+  // }
 
   &__subtitle {
     font-family: 'TTFirsNeue500';
@@ -31,15 +57,27 @@
   }
 
   &__title {
-    @include h2;
+    font-family: 'TTFirsNeueMedium', serif;
+    @include adaptiv-value("font-size", 48, 28, 0);
+    font-weight: 600;
+    line-height: 129%;
     @include adaptiv-value("font-size", 50, 30, 0);
     padding-top: 12px;
 
+    &--main {
+      color: #f55b58;
+    }
+
     &--firstBlock {
-      background: -webkit-linear-gradient(0deg, #FF599F 0.87%, #2145FF 65.88%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      @include adaptiv-value("padding-top", 86, 40, 0);
+      color: #f77658;
+    }
+
+    &--secondBlock {
+      color: #d85bb4;
+    }
+
+    &--thirdBlock {
+      color: #7b4bd9;
     }
   }
 
@@ -59,44 +97,74 @@
       line-height: 120%;
     }
 
-    &--first {
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
+    // &--first {
+    //   display: -webkit-box;
+    //   -webkit-line-clamp: 3;
+    //   -webkit-box-orient: vertical;
+    //   overflow: hidden;
+    // }
   }
 
-  &__firstBlock {
-    position: relative;
+  // &__firstBlock {
+  //   position: relative;
 
-    ::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
-    }
-  }
+  //   ::after {
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     bottom: 0;
+  //     right: 0;
+  //     background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  //   }
+  // }
 
   &__images {
     position: relative;
     height: 720px;
-    @include adaptiv-value("width", 619, 206, 0);
+    width: 100%;
     border-radius: 50px;
-    background: $orangeGradient;
 
-    &::after {
-      position: absolute;
-      top: 20%;
-      left: 16%;
-      content: url('../../images/MacBook.png');
+    // @media (max-width: 1023px) {
+    //   display: none;
+    // }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+
+    &--active {
+      opacity: 1;
     }
 
-    @media (max-width: 1023px) {
-      display: none;
+    &--1 {
+      background: url(../../images/usefulInfo/01.png) no-repeat center;
+      background-size: contain;
+    }
+
+    &--2 {
+      background: url(../../images/usefulInfo/02.png) no-repeat center;
+      background-size: contain;
+    }
+
+    &--3 {
+      background: url(../../images/usefulInfo/03.png) no-repeat center;
+      background-size: contain;
+    }
+
+    &--4 {
+      background: url(../../images/usefulInfo/04.png) no-repeat center;
+      background-size: contain;
     }
   }
 }
+
+// .UsefulInfo__content::-webkit-scrollbar {
+//   display: none;
+// }

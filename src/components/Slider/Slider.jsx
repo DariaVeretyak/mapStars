@@ -31,6 +31,8 @@ export const Slider = ({ navigationPrevRef, navigationNextRef }) => (
     navigation={{
       prevEl: navigationPrevRef.current,
       nextEl: navigationNextRef.current,
+      // prevEl: Slider__prev,
+      // nextEl: navigationNextRef.current,
     }}
     pagination={{ clickable: true }}
     mousewheel

@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
 import img1 from '../../images/howWork1.jpg';
 import img2 from '../../images/howWork2_1.png';
@@ -8,53 +9,58 @@ import './HowWorkBlock.scss';
 
 export const HowWork = ({ howWorkRef }) => (
   <section className="HowWork" ref={howWorkRef}>
-    <h2 className="HowWork__title">
-      How does it work?
-    </h2>
-    <p className="HowWork__steps">
-      Three easy steps to implement GEO technology
-    </p>
     <div className="HowWork__content">
       <div className="HowWork__step HowWork__step--1">
-        <div className="HowWork__images HowWork__images--1">
-          <img
-            className="HowWork__img"
-            src={img1}
-            alt="how registration phone"
-          />
-        </div>
-        <div className="HowWorkBlock HowWorkBlock--1">
-          <p className="HowWorkBlock__step">01</p>
-          <h3 className="HowWorkBlock__title">Registration</h3>
-          <div className="HowWorkBlock__contentBlock">
-            <p className="HowWorkBlock__content">
-              At the first stage, our specialists register your business
-              in the Google My Business global business directory, as well
-              as in some other services. We will collect and publish:
-              basic information about your business (description, exact
-              address, photos, phone numbers, work schedule), and optimize
-              and customize the profile of the institution.
-            </p>
-            <p className="HowWorkBlock__content">
-              Our company will be glad to offer you a standard photo session
-              of your business. As well as a modern 360° panoramic photo
-              session.
-            </p>
-            <p className="HowWorkBlock__content">
-              If your company does not have a website, we will set up a
-              free business page for you from Google or a more advanced
-              version from Stars Maps.
-            </p>
-            <p className="HowWorkBlock__content">
-              Google search provides the user with information about
-              nearby, popular, and accessible places. After registration,
-              potential visitors can easily find information about your
-              business using Google Search, and Google Maps. By registering,
-              you will increase the number of new customers and calls for
-              your business.
-            </p>
+        <Fade delay={300} bottom>
+          <h2 className="HowWork__title">
+            How does it work?
+          </h2>
+        </Fade>
+        <p className="HowWork__steps">
+          Three easy steps to implement GEO technology
+        </p>
+        <div className="HowWork__info">
+          <div className="HowWork__images HowWork__images--1">
+            <img
+              className="HowWork__img"
+              src={img1}
+              alt="how registration phone"
+            />
+          </div>
+          <div className="HowWorkBlock HowWorkBlock--1">
+            <p className="HowWorkBlock__step">01</p>
+            <h3 className="HowWorkBlock__title">Registration</h3>
+            <div className="HowWorkBlock__contentBlock">
+              <p className="HowWorkBlock__content">
+                At the first stage, our specialists register your business
+                in the Google My Business global business directory, as well
+                as in some other services. We will collect and publish:
+                basic information about your business (description, exact
+                address, photos, phone numbers, work schedule), and optimize
+                and customize the profile of the institution.
+              </p>
+              <p className="HowWorkBlock__content">
+                Our company will be glad to offer you a standard photo session
+                of your business. As well as a modern 360° panoramic photo
+                session.
+              </p>
+              <p className="HowWorkBlock__content">
+                If your company does not have a website, we will set up a
+                free business page for you from Google or a more advanced
+                version from Stars Maps.
+              </p>
+              <p className="HowWorkBlock__content">
+                Google search provides the user with information about
+                nearby, popular, and accessible places. After registration,
+                potential visitors can easily find information about your
+                business using Google Search, and Google Maps. By registering,
+                you will increase the number of new customers and calls for
+                your business.
+              </p>
+            </div>
           </div>
         </div>
+
       </div>
       <div className="HowWork__step HowWork__step--2">
         <div className="HowWorkBlock">
