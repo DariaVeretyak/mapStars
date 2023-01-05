@@ -18,10 +18,10 @@ export const Header = ({
   packagesRef,
   contactRef,
 }) => {
-  const arr = useTranslation();
+  // const arr = useTranslation();
   const { t, i18n } = useTranslation();
 
-  const languages = [{'name':'Eng', 'lg': 'en', 'id': '1'}, {'name':'Ukr', 'lg': 'ua', 'id': '2'}, {'name':'Rus', 'lg':'ru', 'id': '3'}, {'name':'Ger', 'lg':'de', 'id': '4'}];
+  const languages = [{'name':'Eng', 'lg': 'en', 'id': '1'}, {'name':'Ukr', 'lg': 'ua', 'id': '2'}, {'name':'Rus', 'lg':'ru', 'id': '3'}];
 
   function clickLanguage(lang) {
     i18n.changeLanguage(lang);
@@ -31,7 +31,7 @@ export const Header = ({
   const [selectOpen, setSelectOpen] = useState(false);
   const [languagesChoose, setLanguagesChoose] = useState(languages[0].name);
 
-  let localStorageLang = localStorage.getItem('lpz');
+  // let localStorageLang = localStorage.getItem('lpz');
   const activeLang = document.querySelector('.Header__select-current');
   const allLang = [ ...document.querySelectorAll('.Header__select-item') ];
 
@@ -261,17 +261,6 @@ export const Header = ({
                 >
                   Rus
                 </div>
-                <div
-                  className="Header__select-item"
-                  data-current="Ger"
-                  onClick={() => {
-                    setLanguagesChoose("Ger");
-                    localStorage.setItem('lpz', "Ger");
-                    clickLanguage("Ger");
-                  }}
-                >
-                  Ger
-                  </div>
               </div>
             </div>
           </label>

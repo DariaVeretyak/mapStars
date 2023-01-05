@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 import advantagesEng from '../../api/advantageEng.json';
 import advantagesRus from '../../api/advantageRus.json';
 import advantagesUkr from '../../api/advantageUkr.json';
-import advantagesGer from '../../api/advantageGer.json';
+// import advantagesGer from '../../api/advantageGer.json';
 import translationEN from '../../locales/en/translation.json';
-import translationDE from '../../locales/ru/translation.json';
 import translationUA from '../../locales/ua/translation.json';
 import translationRU from '../../locales/ru/translation.json';
 import { useTranslation } from 'react-i18next';
@@ -27,9 +26,6 @@ export const Advantages = ({ advantagesRef }) => {
   } else if (arr.i18n.language == 'Ukr') {
     translation = translationUA;
     advantages = advantagesUkr;
-  } else if (arr.i18n.language == 'Ger') {
-    translation = translationDE;
-    advantages = advantagesGer;
   }
 
   return (
