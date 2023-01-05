@@ -36,7 +36,7 @@ export const Examples = () => {
   return (
     <section className="Examples App__section">
       <Fade delay={300} bottom>
-        <h2 className="Examples__title">{translation.Examples.text1}</h2>
+        {/* <h2 className="Examples__title">{translation.Examples.text1}</h2> */}
       </Fade>
       <div className="Examples__content">
         <div className="Examples__prev">

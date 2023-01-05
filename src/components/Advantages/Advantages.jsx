@@ -32,7 +32,7 @@ export const Advantages = ({ advantagesRef }) => {
     <section className="Advantages App__section" ref={advantagesRef}>
       <Fade delay={300} bottom>
         <h2 className="Advantages__title">
-          {translation.H.Advantages}
+          {/* {translation.H.Advantages} */}
         </h2>
       </Fade>
       <ul
