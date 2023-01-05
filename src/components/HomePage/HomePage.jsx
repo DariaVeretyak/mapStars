@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import image from '../images/homePage.png';
+// import image from '../images/homePage.png';
 
 import './HomePage.scss';
 
@@ -55,7 +55,7 @@ export const HomePage = ({ getStarted }) => {
         <div className="HomePage__animation">
           <img
             className="HomePage__backgroundImg"
-            src={image}
+            src="../../images/homePage.png"
             alt="background"
           />
           <div className="HomePage__decoration HomePage__decoration--1" />

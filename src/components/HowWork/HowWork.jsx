@@ -1,9 +1,9 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
-import img1 from '../images/howWork1.jpg';
-import img2 from '../images/howWork2_1.png';
-import img3 from '../images/howWork3_1.png';
+// import img1 from '../images/howWork1.jpg';
+// import img2 from '../images/howWork2_1.png';
+// import img3 from '../images/howWork3_1.png';
 import './HowWork.scss';
 import './HowWorkBlock.scss';
 
@@ -23,7 +23,7 @@ export const HowWork = ({ howWorkRef }) => (
           <div className="HowWork__images HowWork__images--1">
             <img
               className="HowWork__img"
-              src={img1}
+              src="../../images/howWork1.png"
               alt="how registration phone"
             />
           </div>
@@ -107,7 +107,7 @@ export const HowWork = ({ howWorkRef }) => (
         <div className="HowWork__images HowWork__images--2">
           <img
             className="HowWork__img"
-            src={img2}
+            src="../../images/howWork2.png"
             alt="technology"
           />
         </div>
@@ -116,7 +116,7 @@ export const HowWork = ({ howWorkRef }) => (
         <div className="HowWork__images HowWork__images--3">
           <img
             className="HowWork__img"
-            src={img3}
+            src="../../images/howWork3.png"
             alt="how analytic"
           />
         </div>

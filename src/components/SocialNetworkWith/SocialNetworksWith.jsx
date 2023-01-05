@@ -1,6 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import image from '../images/networks.png';
+// import image from '../images/networks.png';
 import './SocialNetworksWith.scss';
 
 export const SocialNetworksWith = () => (
@@ -8,7 +8,7 @@ export const SocialNetworksWith = () => (
     <div className="SocialNetworksWith__images">
       <img
         className="SocialNetworksWith__img"
-        src={image}
+        src="../../images/networks.png"
         alt="girl with phone"
       />
     </div>
