@@ -31,7 +31,7 @@ export const Awards = () => {
         <h2 className="Awards__title">Our awards</h2>
       </Fade>
       <p className="Awards__subtitle">
-        {translation.Awards.text1}
+        {/* {translation.Awards.text1} */}
       </p>
       <div className="Awards__companies">
         {awards.map(award => (

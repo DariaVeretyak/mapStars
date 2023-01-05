@@ -36,13 +36,15 @@ export const Examples = () => {
   return (
     <section className="Examples App__section">
       <Fade delay={300} bottom>
-        <h2 className="Examples__title">{translation.Examples.text1}</h2>
+        <h2 className="Examples__title">
+          {/* {translation.Examples.text1} */}
+        </h2>
       </Fade>
       <div className="Examples__content">
         <div className="Examples__prev">
           <div className="Examples__block">
             <p className="Examples__increase">
-              {translation.Examples.text2}
+              {/* {translation.Examples.text2} */}
             </p>
             <p className="Examples__indicators">+40%</p>
           </div>
@@ -50,7 +52,7 @@ export const Examples = () => {
           <div className="Examples__block" />
           <div className="Examples__block">
             <p className="Examples__increase">
-              {translation.Examples.text3}
+              {/* {translation.Examples.text3} */}
             </p>
             <p className="Examples__indicators">+10%</p>
           </div>
@@ -88,19 +90,32 @@ export const Examples = () => {
         >
           <SwiperSlide>
             <div className="Slider__block">
-              <h3 className="Slider__title">{translation.Slider.text1}</h3>
+            <h3 className="Slider__title">Car wash Ceramic Pro Latvia</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {translation.Slider.text2}
+                  Ceramic Pro is the first client of the company in Latvia,
+                  as well as the first client abroad.
                 </p>
                 <p className="Slider__info">
-                  {translation.Slider.text3}
+                  After changing the car wash system and approach to working
+                  with the client, under the new Ceramic Pro brand, the task
+                  was to bring more customers in the 16/17 tourist season than
+                  in the 15/16 season.
                 </p>
                 <p className="Slider__info">
-                  {translation.Slider.text4}
+                  The main focus of the photo session/photo presentation was to be
+                  the Ceramic Pro logo and new corporate identity, as well as the
+                  workflow and higher level of the average customer. This project
+                  has become a pilot project for our company in terms of introducing
+                  a unique Motivator design with the logo of the client&apos;s
+                  company. The task was also to orient the issue in Google search
+                  for a Russian-speaking tourist/client.
                 </p>
                 <p className="Slider__info">
-                  {translation.Slider.text5}
+                  The result was not long in coming, already in the next 16/17 season
+                  in Jurmala, 17% more customers turned to the car wash than in the
+                  15/16 season. According to our forecasts, they should grow up to 25%
+                  over the next
                 </p>
               </div>
             </div>
@@ -110,7 +125,7 @@ export const Examples = () => {
               <h3 className="Slider__title">Slide2</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {translation.Slider.text6}
+                  {/* {translation.Slider.text6} */}
                 </p>
               </div>
             </div>
@@ -120,7 +135,7 @@ export const Examples = () => {
               <h3 className="Slider__title">Slide3</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {translation.Slider.text7}
+                  {/* {translation.Slider.text7} */}
                 </p>
               </div>
             </div>
@@ -130,7 +145,7 @@ export const Examples = () => {
               <h3 className="Slider__title">Slide4</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {translation.Slider.text8}
+                  {/* {translation.Slider.text8} */}
                 </p>
               </div>
             </div>
