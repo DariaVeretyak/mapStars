@@ -32,8 +32,8 @@ export const Header = ({
   const [languagesChoose, setLanguagesChoose] = useState(languages[0].name);
 
   // let localStorageLang = localStorage.getItem('lpz');
-  const activeLang = document.querySelector('.Header__select-current');
-  const allLang = [ ...document.querySelectorAll('.Header__select-item') ];
+  // const activeLang = document.querySelector('.Header__select-current');
+  // const allLang = [ ...document.querySelectorAll('.Header__select-item') ];
 
   function removeItemsClass(arr) {
     for (let i = 0; i < arr.length; i++) {

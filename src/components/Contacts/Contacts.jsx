@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import './Contacts.scss';
 
 export const Contacts = ({ getStarted, contactRef }) => {
-  const { t } = useTranslation();
 
   return (
     <section className="Contacts App__section" ref={contactRef}>
-      <h2 className="Contacts__subtitle">{t('Contacts.text1')}</h2>
+      <h2 className="Contacts__subtitle">Ready for take-off?</h2>
       <h1 className="Contacts__title">
-        {t('Contacts.text2')}
+        Get in touch
       </h1>
       <div className="Contacts__contacts">
         <button
