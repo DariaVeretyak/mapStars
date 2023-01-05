@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
-import { set } from 'react-hook-form';
+// import { useTranslation } from 'react-i18next';
+// import { set } from 'react-hook-form';
 import logo from '../../images/logo.svg';
 import logoWhite from '../../images/logo-white.svg';
 import './Header.scss';
@@ -19,13 +19,13 @@ export const Header = ({
   contactRef,
 }) => {
   // const arr = useTranslation();
-  const { t, i18n } = useTranslation();
+  // const { t, i18n } = useTranslation();
 
   const languages = [{'name':'Eng', 'lg': 'en', 'id': '1'}, {'name':'Ukr', 'lg': 'ua', 'id': '2'}, {'name':'Rus', 'lg':'ru', 'id': '3'}];
 
-  function clickLanguage(lang) {
-    i18n.changeLanguage(lang);
-  }
+  // function clickLanguage(lang) {
+  //   i18n.changeLanguage(lang);
+  // }
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectOpen, setSelectOpen] = useState(false);
@@ -233,8 +233,8 @@ export const Header = ({
                   data-current="Eng"
                   onClick={() => {
                     setLanguagesChoose("Eng");
-                    localStorage.setItem('lpz', "Eng");
-                    clickLanguage("Eng");
+                    // localStorage.setItem('lpz', "Eng");
+                    // clickLanguage("Eng");
                   }}
                 >
                   Eng
@@ -244,8 +244,8 @@ export const Header = ({
                   data-current="Ukr"
                   onClick={() => {
                     setLanguagesChoose("Ukr");
-                    localStorage.setItem('lpz', "Ukr");
-                    clickLanguage("Ukr");
+                    // localStorage.setItem('lpz', "Ukr");
+                    // clickLanguage("Ukr");
                   }}
                 >
                   Ukr
@@ -255,8 +255,8 @@ export const Header = ({
                   data-current="Rus"
                   onClick={() => {
                     setLanguagesChoose("Rus");
-                    localStorage.setItem('lpz', "Rus");
-                    clickLanguage("Rus");
+                    // localStorage.setItem('lpz', "Rus");
+                    // clickLanguage("Rus");
                   }}
                 >
                   Rus

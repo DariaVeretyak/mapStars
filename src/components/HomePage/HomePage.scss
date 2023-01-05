@@ -78,6 +78,9 @@
   }
 
   &__backgroundImg {
+    background: url(../../images/homePage.png) no-repeat center;
+    background-size: contain;
+    width: 600px;
     @include adaptiv-value("height", 585, 220, 0);
     z-index: 3;
     align-self: flex-end;

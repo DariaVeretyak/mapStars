@@ -53,10 +53,10 @@ export const HomePage = ({ getStarted }) => {
           </button>
         </div>
         <div className="HomePage__animation">
-          <img
+          <div
             className="HomePage__backgroundImg"
-            src="../../images/homePage.png"
-            alt="background"
+            // src="../../images/homePage.png"
+            // alt="background"
           />
           <div className="HomePage__decoration HomePage__decoration--1" />
           <div className="HomePage__decoration HomePage__decoration--2" />
