@@ -9,6 +9,7 @@ import { SheduleCall } from './components/SheduleCall';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsOfService } from './components/TermsOfService';
 import { Footer } from './components/Footer';
+import './i18next';
 import './App.scss';
 
 const App = () => {

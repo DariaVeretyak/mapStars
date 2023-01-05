@@ -24,12 +24,11 @@ export const Advantages = ({ advantagesRef }) => {
   } else if (arr.i18n.language == 'Ger') {
     advantages = advantagesGer;
   }
-
   return (
     <section className="Advantages App__section" ref={advantagesRef}>
       <Fade delay={300} bottom>
         <h2 className="Advantages__title">
-          {t('Advantages.text1')}
+          {t(advantages.text1)}
         </h2>
       </Fade>
       <ul

@@ -8,6 +8,10 @@
   grid-template-columns: 0.9fr 1.1fr;
   gap: 110px;
 
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
   &__swiper {
     display: flex;
     flex-direction: column;
@@ -15,38 +19,10 @@
     // overflow-y: scroll;
     height: 720px;
 
-    // @media (max-width: 1023px) {
-    //   width: 100%;
-    //   padding-right: 0;
-    // }
+    @include mobile {
+      height: 550px;
+    }
   }
-
-  // &__block {
-  //   display: flex;
-  //   flex-direction: column;
-  //   position: sticky;
-  //   bottom: 0;
-  //   background-color: #fff;
-  //   height: 100%;
-  //   padding-top: 40px;
-  //   padding-bottom: 40px;
-
-  //   &--main {
-  //     z-index: 4;
-  //   }
-
-  //   &--first {
-  //     z-index: 3;
-  //   }
-
-  //   &--second {
-  //     z-index: 2;
-  //   }
-
-  //   &--third {
-  //     z-index: 1;
-  //   }
-  // }
 
   &__subtitle {
     font-family: 'TTFirsNeue500';
@@ -125,9 +101,9 @@
     width: 100%;
     border-radius: 50px;
 
-    // @media (max-width: 1023px) {
-    //   display: none;
-    // }
+    @include mobile {
+      display: none;
+    }
   }
 
   &__img {

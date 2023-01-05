@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
+import { set } from 'react-hook-form';
 import logo from '../../images/logo.svg';
 import logoWhite from '../../images/logo-white.svg';
 import './Header.scss';
@@ -16,12 +18,22 @@ export const Header = ({
   packagesRef,
   contactRef,
 }) => {
+  const arr = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const languages = [{'name':'Eng', 'lg': 'en', 'id': '1'}, {'name':'Ukr', 'lg': 'ua', 'id': '2'}, {'name':'Rus', 'lg':'ru', 'id': '3'}, {'name':'Ger', 'lg':'de', 'id': '4'}];
+
+  function clickLanguage(lang) {
+    i18n.changeLanguage(lang);
+  }
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectOpen, setSelectOpen] = useState(false);
-  // const headerLang = document.querySelector('.Header__select-header');
+  const [languagesChoose, setLanguagesChoose] = useState(languages[0].name);
+
+  let localStorageLang = localStorage.getItem('lpz');
   const activeLang = document.querySelector('.Header__select-current');
   const allLang = [ ...document.querySelectorAll('.Header__select-item') ];
-  // const bodyLang = document.querySelector('.Header__select-body');
 
   function removeItemsClass(arr) {
     for (let i = 0; i < arr.length; i++) {
@@ -37,15 +49,10 @@ export const Header = ({
     }, 7000)
   };
 
-  const changeLanguage = (activeItem) => {
-    // removeItemsClass(allLang);
-
-    // console.log(activeItem);
-
-    // activeItem.classList.add('Header__select-item--active');
-    document.querySelector('.Header__select-current').textContent = activeItem;
-    setSelectOpen(false);
-  };
+  // const changeLanguage = (activeItem) => {
+  //   document.querySelector('.Header__select-current').textContent = activeItem;
+  //   setSelectOpen(false);
+  // };
 
   const handleScroll = (ref) => {
     try {
@@ -72,14 +79,7 @@ export const Header = ({
   };
 
   // #region changeLanguage
-  // const languages = ['Eng', 'Ukr', 'Rus', 'Ger'];
-  // const [languagesChoose, setLanguagesChoose] = useState(languages[0]);
 
-  // const onKeyPress = (eKey, value) => {
-  //   if (eKey === 'Enter') {
-  //     setLanguagesChoose(value);
-  //   }
-  // };
   // #endregion
 
   return (
@@ -217,7 +217,7 @@ export const Header = ({
           >
             <div className="Header__select">
               <div className="Header__select-header">
-                <span className="Header__select-current">Eng</span>
+                <span className="Header__select-current">{languagesChoose}</span>
                 <div className="Header__select-icon"></div>
               </div>
               <div
@@ -231,28 +231,44 @@ export const Header = ({
                 <div
                   className="Header__select-item Header__select-item--active"
                   data-current="Eng"
-                  onClick={() => changeLanguage("Eng")}
+                  onClick={() => {
+                    setLanguagesChoose("Eng");
+                    localStorage.setItem('lpz', "Eng");
+                    clickLanguage("Eng");
+                  }}
                 >
                   Eng
                 </div>
                 <div
                   className="Header__select-item"
                   data-current="Ukr"
-                  onClick={() => changeLanguage("Ukr")}
+                  onClick={() => {
+                    setLanguagesChoose("Ukr");
+                    localStorage.setItem('lpz', "Ukr");
+                    clickLanguage("Ukr");
+                  }}
                 >
                   Ukr
                 </div>
                 <div
                   className="Header__select-item"
                   data-current="Rus"
-                  onClick={() => changeLanguage("Rus")}
+                  onClick={() => {
+                    setLanguagesChoose("Rus");
+                    localStorage.setItem('lpz', "Rus");
+                    clickLanguage("Rus");
+                  }}
                 >
                   Rus
                 </div>
                 <div
                   className="Header__select-item"
                   data-current="Ger"
-                  onClick={() => changeLanguage("Ger")}
+                  onClick={() => {
+                    setLanguagesChoose("Ger");
+                    localStorage.setItem('lpz', "Ger");
+                    clickLanguage("Ger");
+                  }}
                 >
                   Ger
                   </div>
