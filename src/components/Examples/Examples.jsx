@@ -12,24 +12,40 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import translationEN from '../../locales/en/translation.json';
+import translationDE from '../../locales/ru/translation.json';
+import translationUA from '../../locales/ua/translation.json';
+import translationRU from '../../locales/ru/translation.json';
 import { useTranslation } from 'react-i18next';
 
 import './Slider.scss';
 import './Examples.scss';
 
 export const Examples = () => {
-  const { t } = useTranslation();
+  const arr = useTranslation();
+
+  let translation;
+
+  if (arr.i18n.language == 'Eng') {
+    translation = translationEN;
+  } else if (arr.i18n.language == 'Rus') {
+    translation = translationRU;
+  } else if (arr.i18n.language == 'Ukr') {
+    translation = translationUA;
+  } else if (arr.i18n.language == 'Ger') {
+    translation = translationDE;
+  }
 
   return (
     <section className="Examples App__section">
       <Fade delay={300} bottom>
-        <h2 className="Examples__title">{t('Examples.text1')}</h2>
+        <h2 className="Examples__title">{translation.Examples.text1}</h2>
       </Fade>
       <div className="Examples__content">
         <div className="Examples__prev">
           <div className="Examples__block">
             <p className="Examples__increase">
-              {t('Examples.text2')}
+              {translation.Examples.text2}
             </p>
             <p className="Examples__indicators">+40%</p>
           </div>
@@ -37,7 +53,7 @@ export const Examples = () => {
           <div className="Examples__block" />
           <div className="Examples__block">
             <p className="Examples__increase">
-              {t('Examples.text3')}
+              {translation.Examples.text3}
             </p>
             <p className="Examples__indicators">+10%</p>
           </div>
@@ -75,19 +91,19 @@ export const Examples = () => {
         >
           <SwiperSlide>
             <div className="Slider__block">
-              <h3 className="Slider__title">{t('Slider.text1')}</h3>
+              <h3 className="Slider__title">{translation.Slider.text1}</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {t('Slider.text2')}
+                  {translation.Slider.text2}
                 </p>
                 <p className="Slider__info">
-                  {t('Slider.text3')}
+                  {translation.Slider.text3}
                 </p>
                 <p className="Slider__info">
-                  {t('Slider.text4')}
+                  {translation.Slider.text4}
                 </p>
                 <p className="Slider__info">
-                  {t('Slider.text5')}
+                  {translation.Slider.text5}
                 </p>
               </div>
             </div>
@@ -97,7 +113,7 @@ export const Examples = () => {
               <h3 className="Slider__title">Slide2</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {t('Slider.text6')}
+                  {translation.Slider.text6}
                 </p>
               </div>
             </div>
@@ -107,7 +123,7 @@ export const Examples = () => {
               <h3 className="Slider__title">Slide3</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {t('Slider.text7')}
+                  {translation.Slider.text7}
                 </p>
               </div>
             </div>
@@ -117,7 +133,7 @@ export const Examples = () => {
               <h3 className="Slider__title">Slide4</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {t('Slider.text8')}
+                  {translation.Slider.text8}
                 </p>
               </div>
             </div>

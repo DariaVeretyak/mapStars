@@ -5,30 +5,38 @@ import advantagesEng from '../../api/advantageEng.json';
 import advantagesRus from '../../api/advantageRus.json';
 import advantagesUkr from '../../api/advantageUkr.json';
 import advantagesGer from '../../api/advantageGer.json';
+import translationEN from '../../locales/en/translation.json';
+import translationDE from '../../locales/ru/translation.json';
+import translationUA from '../../locales/ua/translation.json';
+import translationRU from '../../locales/ru/translation.json';
 import { useTranslation } from 'react-i18next';
 import './Advantages.scss';
 
 export const Advantages = ({ advantagesRef }) => {
-  const { t } = useTranslation();
-
   const arr = useTranslation();
 
   let advantages;
+  let translation;
   
   if (arr.i18n.language == 'Eng') {
+    translation = translationEN;
     advantages = advantagesEng;
   } else if (arr.i18n.language == 'Rus') {
+    translation = translationRU;
     advantages = advantagesRus;
   } else if (arr.i18n.language == 'Ukr') {
+    translation = translationUA;
     advantages = advantagesUkr;
   } else if (arr.i18n.language == 'Ger') {
+    translation = translationDE;
     advantages = advantagesGer;
   }
+
   return (
     <section className="Advantages App__section" ref={advantagesRef}>
       <Fade delay={300} bottom>
         <h2 className="Advantages__title">
-          {t(advantages.text1)}
+          {translation.H.Advantages}
         </h2>
       </Fade>
       <ul
