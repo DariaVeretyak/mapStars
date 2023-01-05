@@ -12,9 +12,9 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-import translationEN from '../../locales/en/translation.json';
-import translationUA from '../../locales/ua/translation.json';
-import translationRU from '../../locales/ru/translation.json';
+import translationEN from '../locales/en/translation.json';
+import translationUA from '../locales/ua/translation.json';
+import translationRU from '../locales/ru/translation.json';
 import { useTranslation } from 'react-i18next';
 
 import './Slider.scss';
@@ -36,7 +36,7 @@ export const Examples = () => {
   return (
     <section className="Examples App__section">
       <Fade delay={300} bottom>
-        {/* <h2 className="Examples__title">{translation.Examples.text1}</h2> */}
+        <h2 className="Examples__title">{translation.Examples.text1}</h2>
       </Fade>
       <div className="Examples__content">
         <div className="Examples__prev">

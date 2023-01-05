@@ -1,13 +1,13 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
-import advantagesEng from '../../api/advantageEng.json';
-import advantagesRus from '../../api/advantageRus.json';
-import advantagesUkr from '../../api/advantageUkr.json';
+import advantagesEng from '../api/advantageEng.json';
+import advantagesRus from '../api/advantageRus.json';
+import advantagesUkr from '../api/advantageUkr.json';
 // import advantagesGer from '../../api/advantageGer.json';
-import translationEN from '../../locales/en/translation.json';
-import translationUA from '../../locales/ua/translation.json';
-import translationRU from '../../locales/ru/translation.json';
+import translationEN from '../locales/en/translation.json';
+import translationUA from '../locales/ua/translation.json';
+import translationRU from '../locales/ru/translation.json';
 import { useTranslation } from 'react-i18next';
 import './Advantages.scss';
 
@@ -32,7 +32,7 @@ export const Advantages = ({ advantagesRef }) => {
     <section className="Advantages App__section" ref={advantagesRef}>
       <Fade delay={300} bottom>
         <h2 className="Advantages__title">
-          {/* {translation.H.Advantages} */}
+          {translation.H.Advantages}
         </h2>
       </Fade>
       <ul
