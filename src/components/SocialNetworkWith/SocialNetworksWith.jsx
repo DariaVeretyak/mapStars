@@ -1,6 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import image from '../../images/networks.png';
+import image from '../images/networks.png';
 import './SocialNetworksWith.scss';
 
 export const SocialNetworksWith = () => (

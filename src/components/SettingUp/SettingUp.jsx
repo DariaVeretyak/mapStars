@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import img1 from '../../images/setting1.png';
-import img2 from '../../images/setting2.png';
+import img1 from '../images/setting1.png';
+import img2 from '../images/setting2.png';
 import './SettingUp.scss';
 
 export const SettingUp = () => {

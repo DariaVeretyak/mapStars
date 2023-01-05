@@ -1,9 +1,9 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
-import img1 from '../../images/howWork1.jpg';
-import img2 from '../../images/howWork2_1.png';
-import img3 from '../../images/howWork3_1.png';
+import img1 from '../images/howWork1.jpg';
+import img2 from '../images/howWork2_1.png';
+import img3 from '../images/howWork3_1.png';
 import './HowWork.scss';
 import './HowWorkBlock.scss';
 
