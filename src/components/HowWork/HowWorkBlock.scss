@@ -49,4 +49,13 @@
       line-height: 120%;
     }
   }
+
+  &__decor {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    font-size: 24px;
+    transform: rotate(180deg);
+    opacity: 0.5;
+  }
 }

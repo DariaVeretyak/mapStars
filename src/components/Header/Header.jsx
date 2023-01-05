@@ -17,32 +17,69 @@ export const Header = ({
   contactRef,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectOpen, setSelectOpen] = useState(false);
+  // const headerLang = document.querySelector('.Header__select-header');
+  const activeLang = document.querySelector('.Header__select-current');
+  const allLang = [ ...document.querySelectorAll('.Header__select-item') ];
+  // const bodyLang = document.querySelector('.Header__select-body');
+
+  function removeItemsClass(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      arr[i].classList.remove('select__item--active');
+    }
+  };
+
+  function openSelect () {
+    setSelectOpen(!selectOpen);
+
+    setTimeout(() => {
+      setSelectOpen(false)
+    }, 7000)
+  };
+
+  const changeLanguage = (activeItem) => {
+    // removeItemsClass(allLang);
+
+    // console.log(activeItem);
+
+    // activeItem.classList.add('Header__select-item--active');
+    document.querySelector('.Header__select-current').textContent = activeItem;
+    setSelectOpen(false);
+  };
 
   const handleScroll = (ref) => {
-    window.scrollTo({
-      top: ref.offsetTop,
-      left: 0,
-      behavior: 'smooth',
-    });
+    try {
+      window.scrollTo({
+        top: ref.offsetTop,
+        left: 0,
+        behavior: 'smooth',
+      });
+    } catch (error) {
+      throw new Error(error);
+    }
   };
 
   const handleScrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
+    try {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    } catch (error) {
+      throw new Error(error);
+    }
   };
 
   // #region changeLanguage
-  const languages = ['Eng', 'Ukr', 'Rus', 'Ger'];
-  const [languagesChoose, setLanguagesChoose] = useState(languages[0]);
+  // const languages = ['Eng', 'Ukr', 'Rus', 'Ger'];
+  // const [languagesChoose, setLanguagesChoose] = useState(languages[0]);
 
-  const onKeyPress = (eKey, value) => {
-    if (eKey === 'Enter') {
-      setLanguagesChoose(value);
-    }
-  };
+  // const onKeyPress = (eKey, value) => {
+  //   if (eKey === 'Enter') {
+  //     setLanguagesChoose(value);
+  //   }
+  // };
   // #endregion
 
   return (
@@ -176,23 +213,51 @@ export const Header = ({
           <label
             htmlFor="language"
             className="Header__changeLanguage"
+            onClick={() => openSelect()}
           >
-            <select
-              className="Header__select"
-              name="language"
-              id="language"
-              value={languagesChoose}
-              onChange={(event) => {
-                setLanguagesChoose(event.target.value);
-              }}
-              onKeyDown={onKeyPress}
-            >
-              {languages.map(language => (
-                <option key={language}>
-                  {language}
-                </option>
-              ))}
-            </select>
+            <div className="Header__select">
+              <div className="Header__select-header">
+                <span className="Header__select-current">Eng</span>
+                <div className="Header__select-icon"></div>
+              </div>
+              <div
+                className={
+                  classNames(`Header__select-body + ${selectOpen
+                    ? 'Header__select-body--active'
+                    : ''
+                  }`)
+                }
+              >
+                <div
+                  className="Header__select-item Header__select-item--active"
+                  data-current="Eng"
+                  onClick={() => changeLanguage("Eng")}
+                >
+                  Eng
+                </div>
+                <div
+                  className="Header__select-item"
+                  data-current="Ukr"
+                  onClick={() => changeLanguage("Ukr")}
+                >
+                  Ukr
+                </div>
+                <div
+                  className="Header__select-item"
+                  data-current="Rus"
+                  onClick={() => changeLanguage("Rus")}
+                >
+                  Rus
+                </div>
+                <div
+                  className="Header__select-item"
+                  data-current="Ger"
+                  onClick={() => changeLanguage("Ger")}
+                >
+                  Ger
+                  </div>
+              </div>
+            </div>
           </label>
           <button
             type="button"
