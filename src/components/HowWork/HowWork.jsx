@@ -1,8 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReplyAll } from '@fortawesome/free-solid-svg-icons';
 import img1 from '../../images/howWork1.jpg';
 import img2 from '../../images/howWork2_1.png';
 import img3 from '../../images/howWork3_1.png';
@@ -59,7 +57,6 @@ export const HowWork = ({ howWorkRef }) => (
                 you will increase the number of new customers and calls for
                 your business.
               </p>
-              <FontAwesomeIcon icon={faReplyAll} className="HowWorkBlock__decor"/>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import { useTranslation } from 'react-i18next';
 import './Awards.scss';
 
 export const Awards = () => {
@@ -9,13 +10,15 @@ export const Awards = () => {
     awards.push(i);
   }
 
+  const { t } = useTranslation();
+
   return (
     <section className="Awards App__section">
       <Fade delay={300} bottom>
         <h2 className="Awards__title">Our awards</h2>
       </Fade>
       <p className="Awards__subtitle">
-        Our company has a number of cities in the service of Google and Booking
+        {t('awards.text2')}
       </p>
       <div className="Awards__companies">
         {awards.map(award => (
