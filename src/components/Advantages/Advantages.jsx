@@ -13,6 +13,7 @@ import './Advantages.scss';
 
 export const Advantages = ({ advantagesRef }) => {
   const arr = useTranslation();
+  const { t } = useTranslation();
 
   let advantages;
   let translation;
