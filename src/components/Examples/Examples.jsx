@@ -12,9 +12,9 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-import translationEN from '../locales/en/translation.json';
-import translationUA from '../locales/ua/translation.json';
-import translationRU from '../locales/ru/translation.json';
+import translationEN from '../../locales/en/translation.json';
+import translationUA from '../../locales/ua/translation.json';
+import translationRU from '../../locales/ru/translation.json';
 import { useTranslation } from 'react-i18next';
 
 import './Slider.scss';
