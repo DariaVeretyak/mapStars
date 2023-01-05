@@ -37,14 +37,14 @@ export const Examples = () => {
     <section className="Examples App__section">
       <Fade delay={300} bottom>
         <h2 className="Examples__title">
-          {/* {translation.Examples.text1} */}
+          Implementation examples
         </h2>
       </Fade>
       <div className="Examples__content">
         <div className="Examples__prev">
           <div className="Examples__block">
             <p className="Examples__increase">
-              {/* {translation.Examples.text2} */}
+              Increase in the flow of customers
             </p>
             <p className="Examples__indicators">+40%</p>
           </div>
@@ -52,7 +52,7 @@ export const Examples = () => {
           <div className="Examples__block" />
           <div className="Examples__block">
             <p className="Examples__increase">
-              {/* {translation.Examples.text3} */}
+              Increase in the flow of customers
             </p>
             <p className="Examples__indicators">+10%</p>
           </div>
@@ -125,7 +125,7 @@ export const Examples = () => {
               <h3 className="Slider__title">Slide2</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {/* {translation.Slider.text6} */}
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam commodi laboriosam assumenda praesentium sunt! Dolor, possimus quos nostrum ullam nam voluptatum, facilis inventore cumque dolore porro consequatur distinctio aliquam!
                 </p>
               </div>
             </div>
@@ -135,7 +135,7 @@ export const Examples = () => {
               <h3 className="Slider__title">Slide3</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {/* {translation.Slider.text7} */}
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium veritatis velit ea dolorem non, dolor aliquam voluptates odio reiciendis accusantium voluptate sint dolores illum recusandae cum, eveniet libero inventore!
                 </p>
               </div>
             </div>
@@ -145,7 +145,7 @@ export const Examples = () => {
               <h3 className="Slider__title">Slide4</h3>
               <div className="Slider__infoBlock">
                 <p className="Slider__info">
-                  {/* {translation.Slider.text8} */}
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, voluptatibus temporibus rem beatae dicta dolores, excepturi, quasi quod qui vero adipisci voluptas at et ipsam quos culpa quibusdam optio laboriosam.
                 </p>
               </div>
             </div>
